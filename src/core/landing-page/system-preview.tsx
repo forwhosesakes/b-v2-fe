@@ -2,6 +2,7 @@ import Chip from "../../components/chip/chip"
 import SectionWrapper from "../../components/hoc/section-wrapper"
 import DetectionBorders from '../../assets/images/detection-process-borders.svg?react'
 import { useRef } from "react"
+import DetectiionProcessImage from '../../assets/images/detection-process-v2.png'
 
 const SystemPreview = () => {
   const svgContainerRef = useRef<HTMLDivElement>(null!)
@@ -30,7 +31,7 @@ const SystemPreview = () => {
 
 
 
-      <img  src="/b-v2-fe/src/assets/images/detection-process-v2.png"/>
+      <img  src={DetectiionProcessImage}/>
 
       </div>
 

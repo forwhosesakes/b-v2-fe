@@ -11,7 +11,7 @@ const HousingUnits = () => {
         <ZoomableContainer>
           <img
             className="object-cover w-full absolute left-0 h-full "
-            src="/b-v2-fe/src/assets/images/2048.jpg"
+            src="/src/assets/images/2048.jpg"
           />
           <HousesMask/>
         </ZoomableContainer>

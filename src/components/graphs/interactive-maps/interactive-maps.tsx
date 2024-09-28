@@ -1,12 +1,12 @@
 import MarkerCircle from "../../marker-circle/marker-circle"
 import Graph from "../graph"
-
+import CardMapCircle from '../../../assets/images/card-interactive-maps-circle.png'
 const InteractiveMaps = ()=>{
 
 
     return <Graph>
         <div className="magic-circles flex flex-row justify-center group hover:bg-[size:200%_110%] h-full w-full ">
-        <img className=" absolute scale-150  z-20 bottom-0 h-1/3    " src="/b-v2-fe/src/assets/images/card-interactive-maps-circle.png"/>
+        <img className=" absolute scale-150  z-20 bottom-0 h-1/3" src={CardMapCircle}/>
         <div className="absolute w-16 h-16 z-40 -bottom-1/4   bg-white/50 rounded-full   " />
         
         

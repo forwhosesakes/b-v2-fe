@@ -2,6 +2,10 @@ import SectionWrapper from "../../components/hoc/section-wrapper"
 import Glitter from "../../assets/icons/glitter.svg?react"
 import MovingStars from "../../components/moving-stars/moving-stars"
 import VideoPlayer from "../../components/video-player/video-player"
+import PreviewVid from '../../assets/vids/preview.mp4'
+import BlackholeVideo from '../../assets/vids/ball-in-hole-video.webm'
+import PreviewThumbnail from '../../assets/images/landing-preview.svg'
+import BlackholeThumbnail from '../../assets/images/black-hole.svg'
 
 const Hero = () => {
   return (
@@ -25,16 +29,16 @@ const Hero = () => {
             muted
             autoPlay
             className="opacity-60"
-            poster="/b-v2-fe/src/assets/images/black-hole.svg"
+            poster={BlackholeThumbnail}
           >
-            <source src="/b-v2-fe/src/assets/vids/landing.webm" />
+            <source src={BlackholeVideo} />
           </video>
 
           <div className="absolute top-1/2 rounded-xl border border-white/10 p-1 flex flex-col justify-center">
            
-           <VideoPlayer source={"/b-v2-fe/src/assets/vids/preview.mp4"} 
+           <VideoPlayer source={PreviewVid} 
            styles="opacity-75"
-           thumbnail={"/b-v2-fe/src/assets/images/landing-preview.svg"}/>
+           thumbnail={PreviewThumbnail}/>
             
             
           </div>

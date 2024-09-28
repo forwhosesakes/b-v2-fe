@@ -1,5 +1,6 @@
 import Capsule from "../../capsule/capsule"
 import Graph from "../graph"
+import IndicatorBlur from '../../../assets/images/indicator-blur.png'
 
 const AdvancedIndicator = ()=>{
 
@@ -7,7 +8,7 @@ const AdvancedIndicator = ()=>{
 
 
     return <Graph>
-        <img className="absolute w-full h-full z-0 " src="/b-v2-fe/src/assets/images/indicator-blur.png"/>
+        <img className="absolute w-full h-full z-0 " src={IndicatorBlur}/>
        
         <div className="relative group w-full h-full z-10 capsules">
             <div>

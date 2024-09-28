@@ -11,23 +11,23 @@ export default {
     extend: {
       backgroundImage: {
         'radial-gradient-border-navbar': 'radial-gradient(62.87% 100% at 50% 100%,rgba(255,255,255,.12) 0%,rgba(255,255,255,0) 100%)',
-        'landing-page-image':"url('/b-v2-fe/src/assets/images/landing.svg')",
-        'challenges-image': "url('/b-v2-fe/src/assets/images/challenges-bg.png') lightgray 50%",
-        'vis-charts-before':"url('/b-v2-fe/src/assets/images/viz-charts.png')",
-        'vis-charts-after':"url('/b-v2-fe/src/assets/images/viz-charts-2.png')",
+        'landing-page-image':"url('/src/assets/images/landing.svg')",
+        'challenges-image': "url('/src/assets/images/challenges-bg.png') lightgray 50%",
+        'vis-charts-before':"url('/src/assets/images/viz-charts.png')",
+        'vis-charts-after':"url('/src/assets/images/viz-charts-2.png')",
         'glitter-note-gradient':'linear-gradient(180deg, rgba(229,156,255,1) 0%, rgba(186,156,255,1) 50%, rgba(156,178,255,1) 100%)',
         'ch-radial-gradient':'radial-gradient(circle, rgba(168,127,255,0.04) 0%, rgba(168,127,255,0) 100%)',
         'bottom-black-overlay':'linear-gradient(180deg, rgba(4, 1, 21, 0.00) 0%, rgba(4, 1, 21, 0.70) 34.48%, #030014 82.36%)',
         'upper-black-overlay': 'linear-gradient(0deg, rgba(4, 1, 21, 0.00) 0%, rgba(4, 1, 21, 0.50) 34.48%, #030014 82.36%)',
         'faded-gradient':'linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.00) 100%)', 
         'brightness-gradient':'radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.08) 60%)',
-        'card-gridlines' : "url('/b-v2-fe/src/assets/images/card-gridline.png')", 
-        'map-circles' : "url('/b-v2-fe/src/assets/images/maps-circle-borders.svg')", 
+        'card-gridlines' : "url('/src/assets/images/card-gridline.png')", 
+        'map-circles' : "url('/src/assets/images/maps-circle-borders.svg')", 
         'textbox-gradient':'linear-gradient(180deg, rgba(169, 163, 194, 0.20) 0%, rgba(169, 163, 194, 0.05) 100%)',
-        'union': "url('/b-v2-fe/src/assets/images/union.svg')",
+        'union': "url('/src/assets/images/union.svg')",
         'card-effect-bottom': 'linear-gradient(to bottom,rgba(255,255,255,0.06) 0,rgba(255,255,255,0) 80%)',
         'card-effect-upper': 'linear-gradient(to top,rgba(255,255,255,0.06) 0,rgba(255,255,255,0) 80%)', 
-        'detection-process':'url("/b-v2-fe/src/assets/images/detection-process-v2.png")'
+        'detection-process':'url("/src/assets/images/detection-process-v2.png")'
 
       
       
@@ -106,7 +106,7 @@ export default {
     plugin(function ({ addUtilities }) {
       addUtilities({
         '.bg-overlay': {
-          'background': "url('/b-v2-fe/src/assets/images/challenges-bg.png') lightgray 50% / cover no-repeat",
+          'background': "url('/src/assets/images/challenges-bg.png') lightgray 50% / cover no-repeat",
           'background-position': 'center',
           'mix-blend-mode': 'luminosity'
         },
@@ -126,7 +126,7 @@ export default {
 
         },
         '.card-gridlines' : {
-         'background-image': "url('/b-v2-fe/src/assets/images/card-gridline.png')",
+         'background-image': "url('/src/assets/images/card-gridline.png')",
         'background-size':'contain', 
 
         },
@@ -138,14 +138,14 @@ export default {
         '.indicator-mask-bg':{
           "background-size": "180% 100%",
           "background-position": "0 0",
-          'background-image': "url('/b-v2-fe/src/assets/images/indicator-bg.png'), url('/b-v2-fe/src/assets/images/indicator-blur-v2.png')",
+          'background-image': "url('/src/assets/images/indicator-bg.png'), url('/src/assets/images/indicator-blur-v2.png')",
           'height': "100%",
           'transition': '.45s cubic-bezier(.6,.6,0,1) background-position, .45s cubic-bezier(.6,.6,0,1) -webkit-background-position, 1s cubic-bezier(.6,.6,0,1) opacity !important'
         },
         '.indicator-border-bg':{
           "background-size": "180% 100%",
           "background-position": "0 0",
-          'background-image': "url('/b-v2-fe/src/assets/images/indicator-borders.png'),url('/b-v2-fe/src/assets/images/indicator-blur.png') ",
+          'background-image': "url('/src/assets/images/indicator-borders.png'),url('/src/assets/images/indicator-blur.png') ",
           'height': "80%",
           "opacity":"20%",
           'transition': '.45s cubic-bezier(.6,.6,0,1) background-position, .45s cubic-bezier(.6,.6,0,1) -webkit-background-position, 1s cubic-bezier(.6,.6,0,1) opacity !important'
@@ -153,7 +153,7 @@ export default {
         '.sustainability-chart-bg':{
           "background-size": "180% 100%",
           "background-position": "0 0",
-          'background-image': "url('/b-v2-fe/src/assets/images/sustainability-chart.png'),url('/b-v2-fe/src/assets/images/sustainability-light.png') ",
+          'background-image': "url('/src/assets/images/sustainability-chart.png'),url('/src/assets/images/sustainability-light.png') ",
           'height': "100%",
           'transition': '.45s cubic-bezier(.6,.6,0,1) background-position, .45s cubic-bezier(.6,.6,0,1) -webkit-background-position, 1s cubic-bezier(.6,.6,0,1) opacity !important'
         
@@ -169,7 +169,7 @@ export default {
         '.magic-circles':{
           "background-size": "100% 100%",
           "background-position": "50% 0",
-          'background-image': "url('/b-v2-fe/src/assets/images/maps-circle-borders.svg'),url('/b-v2-fe/src/assets/images/interactive-maps-lights.png') ",
+          'background-image': "url('/src/assets/images/maps-circle-borders.svg'),url('/src/assets/images/interactive-maps-lights.png') ",
           'height': "100%",
           'transition': '.45s cubic-bezier(.6,.6,0,1) background-size, .45s cubic-bezier(.6,.6,0,1) -webkit-background-size, 1s cubic-bezier(.6,.6,0,1) opacity !important'
         }, 

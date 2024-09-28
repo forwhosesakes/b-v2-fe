@@ -1,6 +1,7 @@
 import Chip from "../../components/chip/chip"
 import SectionWrapper from "../../components/hoc/section-wrapper"
 import Logo from '../../assets/icons/vertical-logo.svg?react'
+import EncryptionVid from '../../assets/vids/encryption.webm'
 
 const Outro = ()=>{
 
@@ -18,7 +19,7 @@ const Outro = ()=>{
 
         <video   loop
             muted
-            autoPlay  className="absolute" src="/b-v2-fe/src/assets/vids/encryption.webm"/>
+            autoPlay  className="absolute" src={EncryptionVid}/>
        
     </SectionWrapper>
 }
