@@ -8,11 +8,11 @@ import LandingPage from "../core/landing-page/landing-page";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/b-v2-fe/",
     element: <App />,
     children:[
       {
-        path: "/",
+        path: "/b-v2-fe/",
         element: <LandingPage />,
       },
       {
@@ -20,13 +20,10 @@ const router = createBrowserRouter([
         element: <Detection />,
       },
       {
-        path: "/reports",
+        path: "/b-v2-fe/reports",
         element: <Reports />,
       },
-      {
-        path: "/units",
-        element: <HousingUnits />,
-      },
+  
     ]
   },
  
