@@ -1,6 +1,6 @@
 import Chip from "../../components/chip/chip"
 import SectionWrapper from "../../components/hoc/section-wrapper"
-import DetectionBorders from '../../assets/images/detection-process-borders.svg?react'
+import DetectionBorders from '../../assets/images/detection-process-borders.svg'
 import { useRef } from "react"
 import DetectiionProcessImage from '../../assets/images/detection-process-v2.png'
 import { LazyLoadImage } from "react-lazy-load-image-component"
@@ -18,7 +18,7 @@ const SystemPreview = () => {
           <Chip>عمل النظام</Chip>
         </div>
         <h1 className="leading-loose gradient-text">كيف يعمل نظام بصير؟</h1>
-        <p className="md:w-3/5 md:text-lg text-xs leading-relaxed text-paragraphs_primary/70">
+        <p className="md:w-3/5 md:text-lg text-xs text-center leading-relaxed text-paragraphs_primary/70">
           تعمل كاميرا النظام (هاتف - كاميرا مثبتة ) على تسجيل جميع الصور
           والمشاهد ثم إرسالها إلى وحدة التحليل بشكل آلي ومعالجتها في نفس الوقت
         </p>
@@ -26,13 +26,14 @@ const SystemPreview = () => {
 
       <div ref={svgContainerRef} className="relative">
 
-
-        <DetectionBorders className="absolute" />
-
+        <LazyLoadImage src={DetectionBorders} className="absolute w-full  left-10"/>
 
 
 
-      <LazyLoadImage  src={DetectiionProcessImage}/>
+
+
+
+      <LazyLoadImage className="w-4/5"   src={DetectiionProcessImage}/>
 
       </div>
 

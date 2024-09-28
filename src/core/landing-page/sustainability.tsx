@@ -4,8 +4,8 @@ import { LazyLoadImage } from "react-lazy-load-image-component"
 
 const Sustainability = ()=>{
 
-return    <SectionWrapper styles="md:flex hidden" id="sustainability">
-<LazyLoadImage className="w-4/5" src={sustailabilityImage}/>
+return    <SectionWrapper styles="md:flex mt-24  hidden" id="sustainability">
+<LazyLoadImage className="w-3/4" src={sustailabilityImage}/>
     </SectionWrapper>
 
 
