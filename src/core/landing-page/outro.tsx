@@ -12,7 +12,7 @@ const Outro = ()=>{
        <div className="absolute h-1/3 w-1/2 z-20 flex flex-col justify-between  items-center">
        <Logo width={"35%"} height={"35%"}/>
        <Chip>أمان</Chip>
-       <h3 className="text-paragraphs_primary font-bold ">أمان من هنا لكل مكان </h3>
+       <h3 className="text-paragraphs_primary font-bold ">من هنا أمان لكل مكان </h3>
        <p className="font-medium  opacity-75 text-[rgba(239, 237, 253, 0.70)]">مجتمعات آمنة على مدار اللحظة</p>
        </div>
 
