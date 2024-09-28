@@ -10,6 +10,7 @@ import GridCards from "../../components/grid-cards/grid-cards"
 import RoundedCard from "../../components/grid-cards/rounded-card"
 import SectionWrapper from "../../components/hoc/section-wrapper"
 import useMousePosition from "../../hooks/useMousePosition"
+import BlackholeVideo from '../../assets/vids/ball-in-hole-video.webm'
 
 
 
@@ -26,7 +27,7 @@ const Features = () => {
         autoPlay
         controls={false}
       >
-        <source src={"/src/assets/vids/ball-in-hole-video.webm"} />
+        <source src={BlackholeVideo} />
       </video>
 
       <Chip>مزايا النظام</Chip>

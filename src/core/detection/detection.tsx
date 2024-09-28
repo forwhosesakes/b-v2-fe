@@ -1,36 +1,38 @@
-import { useCallback, useState } from "react";
-import { useDropzone } from "react-dropzone";
-import FileUploadIcon from "../../assets/icons/upload-cloud-line.svg?react";
-import { useGetInferenceMutation } from "../../api/queries/inference.query";
-import CicrularProgress from "../../components/skeleton/circular-progress";
-import Modal from "react-modal";
-import ComparisionModal from "./comparisionModal/comparisionModal";
-import MediaWithProgressOverlay from "../../components/media-with-progress-overlay";
+import { useCallback, useState } from "react"
+import { useDropzone } from "react-dropzone"
+import FileUploadIcon from "../../assets/icons/upload.svg?react"
+import AddIcon from "../../assets/icons/add.svg?react"
+
+import { useGetInferenceMutation } from "../../api/queries/inference.query"
+import CicrularProgress from "../../components/skeleton/circular-progress"
+import Modal from "react-modal"
+import ComparisionModal from "./comparisionModal/comparisionModal"
+import MediaWithProgressOverlay from "../../components/media-with-progress-overlay"
 
 type MediaSource = {
-  uploadedPath: string;
-  inferedPath?: string;
-  type: "image" | "video";
-};
+  uploadedPath: string
+  type: "image" | "video"
+}
 
 const Detection = () => {
   const {
     mutate: mutateGeneralInference,
     isLoading,
     data: inferenceUrl,
-  } = useGetInferenceMutation();
+    reset: clearInferenceData,
+  } = useGetInferenceMutation()
 
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [mediaSrc, setMediaSrc] = useState<MediaSource | null>(null);
+  const [modalIsOpen, setModalIsOpen] = useState(false)
+  const [mediaSrc, setMediaSrc] = useState<MediaSource | null>(null)
 
   const onDrop = useCallback(([acceptedFile]: any[]) => {
     // Do something with the files
     setMediaSrc({
       type: acceptedFile.type.split("/")[0],
       uploadedPath: URL.createObjectURL(acceptedFile),
-    });
-  }, []);
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+    })
+  }, [])
+  const { getRootProps, getInputProps } = useDropzone({
     onDrop,
     maxFiles: 1,
     accept: {
@@ -41,92 +43,102 @@ const Detection = () => {
       "video/webm": [".webm"],
       "image/webp": [".webp"],
     },
-  });
+  })
 
   const runInfernce = async () => {
     mutateGeneralInference([
       mediaSrc!.uploadedPath,
       mediaSrc?.type === "image" ? "jpeg" : "mp4",
-    ]);
+    ])
     //TODO: Handle Error and success
-  };
+  }
+
+  const clearImage = () => {
+    if (mediaSrc) setMediaSrc((prev) => ({ ...prev!, uploadedPath: "" }))
+    clearInferenceData()
+  }
 
   return (
-    <section className=" m-5  mt-36 text-center bg-primary-400 flex flex-col items-center rounded-xl">
-      <div className="flex flex-row w-4/5 ">
-        <div
-          className="UploadContainer
-          m-5 flex flex-col justify-center align-items-center
-           bg-gray-400/30
-           rounded-3xl
-           w-full
-            h-[70vh]"
-        >
+    <section className="m-5 flex flex-col items-center rounded-xl bg-landing-page-image pt-36 text-center">
+      <div className="flex w-full flex-row">
+        <div className="UploadContainer align-items-center m-5 flex h-[60vh] w-full flex-col justify-center rounded-lg border border-turquoise bg-detection-gradient">
           {!mediaSrc || !mediaSrc.uploadedPath ? (
             <div
-              className=" flex-1 flex flex-col  w-100  p-5 justify-center items-center text-center"
+              className="w-100 flex flex-1 flex-col items-center justify-center p-5 text-center"
               {...getRootProps()}
             >
               <input {...getInputProps()} />
-              <FileUploadIcon color="bg-primary" width={"8em"} height={"8em"} />
+              <FileUploadIcon />
 
-              {isDragActive ? (
-                <p>اسحب المرفقات هنا...</p>
-              ) : (
-                <p>ارفع صورة أو مقطع فيديو ...</p>
-              )}
+              <p className="my-5 font-medium">
+                {" "}
+                اسحب و أفلت الملفات هنا للتحليل
+              </p>
+              <p className="my-5 flex w-32 justify-between">
+                <span className="text-turquoise">تحميل ملف</span>
+                <AddIcon />
+              </p>
             </div>
           ) : (
-            <div className="w-full h-full">
-              {inferenceUrl ? (
-                <div className="inferedMediaConatiner relative w-full h-full">
-                  {mediaSrc?.type === "image" && (
-                    <img
-                      className="w-full max-h-full object-cover rounded-3xl absolute inset-0"
-                      src={inferenceUrl}
-                    />
-                  )}
-                  {mediaSrc?.type === "video" && (
-                    <video
-                      className="w-full max-h-full object-cover rounded-3xl absolute inset-0"
-                      width="auto"
-                      height="auto"
-                      controls={true}
-                    >
-                      <source src={inferenceUrl} />{" "}
-                    </video>
-                  )}
-                </div>
-              ) : (
+            <div className="h-full w-full">
+              {
                 <MediaWithProgressOverlay
                   mediaType={mediaSrc.type}
                   mediaSrc={mediaSrc.uploadedPath}
                   progressComponent={CicrularProgress<"INFINTE">}
                   overlayCondition={isLoading}
                 />
-              )}
+              }
             </div>
           )}
+        </div>
+
+        <div className="InferenceConatiner align-items-center m-5 flex h-[60vh] w-full flex-col justify-center rounded-lg border border-turquoise bg-detection-gradient">
+          <div className="relative h-full w-full">
+            {mediaSrc?.type === "image" && inferenceUrl && (
+              <img
+                className="absolute inset-0 h-full w-full rounded-lg object-cover"
+                src={inferenceUrl}
+              />
+            )}
+            {mediaSrc?.type === "video" && inferenceUrl  && (
+              <video
+                className="absolute inset-0 h-full w-full rounded-3xl object-cover"
+                width="auto"
+                height="auto"
+                controls={true}
+              >
+                <source src={inferenceUrl} />{" "}
+              </video>
+            )}
+          </div>
         </div>
       </div>
 
       {/* Action buttons */}
-      <div className="w-1/5 flex  flex-row justify-center">
+      <div className="flex w-fit flex-row justify-between gap-6">
         {!inferenceUrl && (
           <button
             onClick={runInfernce}
-            className="button button-primary w-fit text-slate-600 px-5 py-2 bg-slate-50/75 hover:bg-slate-100/50 rounded-3xl "
+            className="button button-primary button-container w-fit px-16 py-2 hover:shadow-inner"
           >
-            الكشف
+            <span className="button-gradient-text">الكشف</span>
           </button>
         )}
-        {inferenceUrl && mediaSrc?.type==="image" &&(
+
+        <button
+          onClick={clearImage}
+          className="button button-primary button-container w-fit px-16 py-2 hover:shadow-inner"
+        >
+          <span className="button-gradient-text">مسح</span>
+        </button>
+
+        {inferenceUrl && mediaSrc?.type === "image" && (
           <button
             onClick={() => setModalIsOpen(true)}
-            className="button button-primary w-fit text-slate-600 px-5 py-2 bg-slate-50/75 hover:bg-slate-100/50 rounded-3xl "
+            className="button button-primary button-container w-fit px-16 py-2 hover:shadow-inner"
           >
-            {" "}
-            المقارنة
+            <span className="button-gradient-text">المقارنة</span>
           </button>
         )}
       </div>
@@ -162,7 +174,7 @@ const Detection = () => {
         </Modal>
       )}
     </section>
-  );
-};
+  )
+}
 
-export default Detection;
+export default Detection

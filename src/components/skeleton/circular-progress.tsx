@@ -8,7 +8,7 @@ type TProps <T extends ProgressTypes>= {
 function CicrularProgress <T extends ProgressTypes>  (props:TProps<T>) {
   return (
     <div className="relative z-30 h-full w-full">
-        <p className="absolute top-[50%] left-[45%]">{props.progress}%</p>
+        {/* <p className="absolute top-[50%] left-[45%]">{props.progress}%</p> */}
         <svg className="size-1/4 animate-spin  absolute top-[40%] left-[37.5%]" 
     viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
     <circle cx="18" cy="18" r="16" fill="none" 

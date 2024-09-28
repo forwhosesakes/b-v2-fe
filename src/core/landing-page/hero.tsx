@@ -3,7 +3,7 @@ import Glitter from "../../assets/icons/glitter.svg?react"
 import MovingStars from "../../components/moving-stars/moving-stars"
 import VideoPlayer from "../../components/video-player/video-player"
 import PreviewVid from '../../assets/vids/preview.mp4'
-import BlackholeVideo from '../../assets/vids/ball-in-hole-video.webm'
+import BlackholeVideo from '../../assets/vids/landing.webm'
 import PreviewThumbnail from '../../assets/images/landing-preview.svg'
 import BlackholeThumbnail from '../../assets/images/black-hole.svg'
 
