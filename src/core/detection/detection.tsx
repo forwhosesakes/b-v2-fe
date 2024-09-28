@@ -85,7 +85,7 @@ const Detection = () => {
                 <MediaWithProgressOverlay
                   mediaType={mediaSrc.type}
                   mediaSrc={mediaSrc.uploadedPath}
-                  progressComponent={CicrularProgress<"INFINTE">}
+                  progressComponent={CicrularProgress}
                   overlayCondition={isLoading}
                 />
               }

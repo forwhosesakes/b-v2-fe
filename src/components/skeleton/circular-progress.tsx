@@ -1,11 +1,11 @@
 
-type ProgressTypes = "DISCERETE" | "INFINTE"
+// type ProgressTypes = "DISCERETE" | "INFINTE"
 
-type TProps <T extends ProgressTypes>= {
-    progress?: T extends "DISCERETE"? number: never
-}
+// type TProps <T extends ProgressTypes>= {
+//     progress?: T extends "DISCERETE"? number: never
+// }
 
-function CicrularProgress <T extends ProgressTypes>  (props:TProps<T>) {
+function CicrularProgress   () {
   return (
     <div className="relative z-30 h-full w-full">
         {/* <p className="absolute top-[50%] left-[45%]">{props.progress}%</p> */}
