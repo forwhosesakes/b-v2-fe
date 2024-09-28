@@ -12,11 +12,11 @@ import PollutionChip from "./pollutionchip"
 const ReportRow = (props: TProps) => {
   return (
     <div
-      className={`flex w-full justify-between py-3 pl-2 pr-5 transition-all hover:bg-white/5 ${props.selected && "bg-white/5"}`}
+      className={`flex w-full justify-between py-3 pl-2 pr-5 border-b border-b-white/30 transition-all hover:bg-white/5 ${props.selected && "bg-white/5"}`}
     >
-      <p>{props.report.title}</p>
+      <p className="w-64  ">{props.report.title}</p>
 
-      <div className="flex gap-x-5 px-5">
+      <div className="flex gap-x-5  w-64 ">
         {props.report.categories.map((cat: any) => {
           return <PollutionChip category={cat} />
         })}

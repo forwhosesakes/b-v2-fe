@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useGetAllReports } from "../../api/queries/report.query"
-import SearchbarIcon from "../../assets/icons/search.svg?react"
+// import SearchbarIcon from "../../assets/icons/search.svg?react"
 import ReportRow from "./report-row"
 import LeftArrowIcon from "../../assets/icons/left-arrow.svg?react"
 import RightArrowIcon from "../../assets/icons/right-arrow.svg?react"
@@ -11,25 +11,25 @@ import CicrularProgress from "../../components/skeleton/circular-progress"
 // }
 
 const ReportsTable = () => {
-  const [searchTerm, setSearchTerm] = useState("")
+  // const [searchTerm, setSearchTerm] = useState("")
   const [page, setPage] = useState(3)
   const { isLoading, isError, data, isFetching } = useGetAllReports(
-    searchTerm,
+    "",
     page,
     10,
   )
 
-  const onSearchTermChange = (e: any) => {
-    setSearchTerm(e.target.value)
-  }
+  // const onSearchTermChange = (e: any) => {
+  //   setSearchTerm(e.target.value)
+  // }
 
   return (
     <div className="flex-1 p-3">
-      <div className="TableActions flex flex-row justify-between">
+      {/* <div className="TableActions flex flex-row justify-between">
         <button className="button flex flex-row items-center">
           <span>بلاغ جديد</span>
-        </button>
-        <div className="SearchBar flex flex-row items-center">
+        </button> */}
+        {/* <div className="SearchBar flex flex-row items-center">
           <input
             className="m-2 rounded-xl bg-transparent p-2"
             value={searchTerm}
@@ -37,8 +37,8 @@ const ReportsTable = () => {
             placeholder="البحث"
           />
           <SearchbarIcon height={32} />
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
 
       <div>
         {isLoading ? (
@@ -46,7 +46,7 @@ const ReportsTable = () => {
         ) : isError ? (
           <div>Error: </div>
         ) : (
-          <div className="border">
+          <div>
             {data.data.reports.map((report: any) => (
               <ReportRow report={report} key={report.id} selected={false} />
             ))}
@@ -81,7 +81,7 @@ const ReportsTable = () => {
             </button>
           </div>
         </div>
-        {isFetching ? <span> Loading...</span> : null}{" "}
+        {isFetching ? <span> <CicrularProgress/></span> : null}{" "}
       </div>
     </div>
   )
