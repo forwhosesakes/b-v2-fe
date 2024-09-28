@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useRef, useState } from "react";
+import { ReactNode, useEffect, useRef } from "react";
 
 type TProps = {
     id:string,
@@ -21,11 +21,11 @@ const directionToClasses = {
 const SectionWrapper = (props:TProps)=>{
 
     const sectionRef = useRef<HTMLElement>(null!)
-    const [visible, setVisible] = useState(false)
+    // const [visible, setVisible] = useState(false)
 
     const callback = (entries:IntersectionObserverEntry[])=>{
         const [entry] = entries
-        setVisible(entry.isIntersecting)
+        // setVisible(entry.isIntersecting)
         if(entry.isIntersecting && props.onSectionVisible)  props.onSectionVisible()
 
     }

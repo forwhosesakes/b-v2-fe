@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import {  useRef, useState } from "react"
 import PlayButton from "./play-button"
 
 type TProps = {
@@ -12,12 +12,12 @@ const VideoPlayer = (props: TProps) => {
   const ref = useRef<HTMLVideoElement>(null!)
   const [isVideoPlaying, setIsVideoPlaying] = useState(false)
   const [mouseHovered, setMouseHovered] = useState(false)
-  let isPlaying= false
-  useEffect(()=>{
-   isPlaying =isVideoPlaying&& !!(ref.current.currentTime > 0 && !ref.current.paused && !ref.current.ended && ref.current.readyState > 2)
+  // let isPlaying= false
+  // useEffect(()=>{
+  //  isPlaying =isVideoPlaying&& !!(ref.current.currentTime > 0 && !ref.current.paused && !ref.current.ended && ref.current.readyState > 2)
 
 
-  },[])
+  // },[])
 
   
 
