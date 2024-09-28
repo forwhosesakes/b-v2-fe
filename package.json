@@ -10,14 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.637.0",
-    "@aws-sdk/credential-providers": "^3.637.0",
-    "@aws-sdk/s3-request-presigner": "^3.637.0",
-    "@gradio/client": "^1.5.0",
     "@tanstack/react-query-devtools": "^5.53.1",
     "@types/react-modal": "^3.16.3",
     "@types/react-router-hash-link": "^2.4.9",
-    "aws-sdk": "^2.1683.0",
     "axios": "^1.7.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
