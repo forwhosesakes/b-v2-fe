@@ -15,7 +15,7 @@ const router = createBrowserRouter([
         element: <LandingPage />,
       },
       {
-        path: "/detection",
+        path: "/b-v2-fe/detection",
         element: <Detection />,
       },
       {

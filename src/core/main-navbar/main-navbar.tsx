@@ -16,11 +16,11 @@ const MainNavbar = () => {
 
   const [menuOpened, setMenuOpened] = useState(false)
   const navList: NavItem[] = [
-    { name: "main", link: "/#hero", arabicLabel: "الرئيسية" },
-    { name: "about", link: "/#about", arabicLabel: " عن بصير " },
-    { name: "services", link: "/#features", arabicLabel: " خدماتنا " },
-    { name: "detection", link: "/detection", arabicLabel: "الكشف"},
-    { name: "reports", link: "/reports", arabicLabel: "البلاغات" },
+    { name: "main", link: "/b-v2-fe/#hero", arabicLabel: "الرئيسية" },
+    { name: "about", link: "/b-v2-fe/#about", arabicLabel: " عن بصير " },
+    { name: "services", link: "/b-v2-fe/#features", arabicLabel: " خدماتنا " },
+    { name: "detection", link: "/b-v2-fe/detection", arabicLabel: "الكشف"},
+    { name: "reports", link: "/b-v2-fe/reports", arabicLabel: "البلاغات" },
   ]
 
 
@@ -95,7 +95,7 @@ const MainNavbar = () => {
 
         <div className="actions flex flex-row justify-between">
           <button className="m-3 rounded-lg border border-primary/60 bg-gradient-to-b from-tertiary/75 to-tertiary/20 px-3 py-1 md:text-sm text-xs shadow-inner shadow-tertiary hover:shadow-2xl">
-            <Link to="/detection">ابدأ الخدمة</Link>
+            <Link to="/b-v2-fe/detection">ابدأ الخدمة</Link>
           </button>
 
           {/* <ButtonGroup
