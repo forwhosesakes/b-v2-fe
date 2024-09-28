@@ -16,7 +16,6 @@ const useMousePosition = (props:TProps) => {
   if (props.relativeContainerRef && isElementInViewPort(props.relativeContainerRef.current)){
     containerPosition.x = props.relativeContainerRef.current.getBoundingClientRect().left
     containerPosition.y = props.relativeContainerRef.current.getBoundingClientRect().top
-    console.log("container: ", containerPosition)
 
 
   }

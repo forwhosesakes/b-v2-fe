@@ -16,7 +16,6 @@ export function useDynamicSvgImport(iconName: string) {
         setError(err);
         console.error(err);
       } finally {
-        // console.log("ref", importedIconRef);
         
         setLoading(false);
       }

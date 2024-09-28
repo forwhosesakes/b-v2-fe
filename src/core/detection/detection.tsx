@@ -25,7 +25,6 @@ const Detection = () => {
 
   const onDrop = useCallback(([acceptedFile]: any[]) => {
     // Do something with the files
-    console.log(URL.createObjectURL(acceptedFile));
     setMediaSrc({
       type: acceptedFile.type.split("/")[0],
       uploadedPath: URL.createObjectURL(acceptedFile),

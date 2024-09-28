@@ -30,7 +30,7 @@ export const useGetVideoMutation  = ()=>{
         formData.append("video", exampleVideo);
         formData.append("video", exampleVideo, "temp.mp4");
         const res = await performVideoInfernece(formData);
-        console.log("mutation: ", res.data.url);
+    
         
         return res.data.url;
       },
@@ -49,7 +49,6 @@ export const useGetVideoMutation  = ()=>{
           let formData = new FormData();
           formData.append("file", blob, `temp.${ext}`);
           const res = await performGeneralInference(formData);
-          console.log("mutation: ", res.data.url);
           
           return res.data.url;
         },

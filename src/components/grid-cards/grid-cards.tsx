@@ -7,7 +7,6 @@ interface GridCardsProps {
 
 const GridCards = forwardRef<HTMLDivElement, GridCardsProps>(
   ({ columns, children }, ref) => {
-    // console.log("grid ref inside component: ", ref);
 
     const cols = columns
       ? columns === 4
