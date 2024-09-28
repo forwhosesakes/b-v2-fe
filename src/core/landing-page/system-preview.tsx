@@ -30,7 +30,7 @@ const SystemPreview = () => {
 
 
 
-      <img  src="/src/assets/images/detection-process-v2.png"/>
+      <img  src="/b-v2-fe/src/assets/images/detection-process-v2.png"/>
 
       </div>
 

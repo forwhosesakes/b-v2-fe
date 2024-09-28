@@ -25,16 +25,16 @@ const Hero = () => {
             muted
             autoPlay
             className="opacity-60"
-            poster="/src/assets/images/black-hole.svg"
+            poster="/b-v2-fe/src/assets/images/black-hole.svg"
           >
-            <source src="/src/assets/vids/landing.webm" />
+            <source src="/b-v2-fe/src/assets/vids/landing.webm" />
           </video>
 
           <div className="absolute top-1/2 rounded-xl border border-white/10 p-1 flex flex-col justify-center">
            
-           <VideoPlayer source={"/src/assets/vids/preview.mp4"} 
+           <VideoPlayer source={"/b-v2-fe/src/assets/vids/preview.mp4"} 
            styles="opacity-75"
-           thumbnail={"/src/assets/images/landing-preview.svg"}/>
+           thumbnail={"/b-v2-fe/src/assets/images/landing-preview.svg"}/>
             
             
           </div>

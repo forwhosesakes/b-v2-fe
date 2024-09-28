@@ -22,7 +22,7 @@ const LandingPage = () => {
   <SystemPreview/>
   <Sustainability/>
   <AddedValue/>
-  <SectionWrapper styles="md:flex md:flex-row hidden" id="mockup" ><img className="w-3/5" src="/src/assets/images/mockup.png" /></SectionWrapper>
+  <SectionWrapper styles="md:flex md:flex-row hidden" id="mockup" ><img className="w-3/5" src="/b-v2-fe/src/assets/images/mockup.png" /></SectionWrapper>
   <Features/>
   <SmartSolutions/>
   

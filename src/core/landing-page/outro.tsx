@@ -18,7 +18,7 @@ const Outro = ()=>{
 
         <video   loop
             muted
-            autoPlay  className="absolute" src="/src/assets/vids/encryption.webm"/>
+            autoPlay  className="absolute" src="/b-v2-fe/src/assets/vids/encryption.webm"/>
        
     </SectionWrapper>
 }

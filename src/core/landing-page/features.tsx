@@ -26,7 +26,7 @@ const Features = () => {
         autoPlay
         controls={false}
       >
-        <source src={"/src/assets/vids/ball-in-hole-video.webm"} />
+        <source src={"/b-v2-fe/src/assets/vids/ball-in-hole-video.webm"} />
       </video>
 
       <Chip>مزايا النظام</Chip>

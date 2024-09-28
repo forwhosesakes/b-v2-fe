@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+#Allow repo secrets
+env:
+  VITE_SERVER: ${{ secrets.VITE_SERVER }}
 
 jobs:
   build:

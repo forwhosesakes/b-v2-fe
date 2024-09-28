@@ -7,7 +7,7 @@ const AdvancedIndicator = ()=>{
 
 
     return <Graph>
-        <img className="absolute w-full h-full z-0 " src="/src/assets/images/indicator-blur.png"/>
+        <img className="absolute w-full h-full z-0 " src="/b-v2-fe/src/assets/images/indicator-blur.png"/>
        
         <div className="relative group w-full h-full z-10 capsules">
             <div>

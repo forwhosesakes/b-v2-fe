@@ -32,11 +32,11 @@
 
   @font-face {
     font-family: 'Saudia-sans';
-    src: url('/src/assets/fonts/saudiasans-regular/subset-SaudiaSans-Regular.eot');
-    src: url('/src/assets/fonts/saudiasans-regular/subset-SaudiaSans-Regular.eot?#iefix') format('embedded-opentype'),
-        url('/src/assets/fonts/saudiasans-regular/subset-SaudiaSans-Regular.woff2') format('woff2'),
-        url('/src/assets/fonts/saudiasans-regular/subset-SaudiaSans-Regular.woff') format('woff'),
-        url('/src/assets/fonts/saudiasans-regular/subset-SaudiaSans-Regular.ttf') format('truetype');
+    src: url('/b-v2-fe/src/assets/fonts/saudiasans-regular/subset-SaudiaSans-Regular.eot');
+    src: url('/b-v2-fe/src/assets/fonts/saudiasans-regular/subset-SaudiaSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/b-v2-fe/src/assets/fonts/saudiasans-regular/subset-SaudiaSans-Regular.woff2') format('woff2'),
+        url('/b-v2-fe/src/assets/fonts/saudiasans-regular/subset-SaudiaSans-Regular.woff') format('woff'),
+        url('/b-v2-fe/src/assets/fonts/saudiasans-regular/subset-SaudiaSans-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -44,22 +44,22 @@
 
   @font-face {
     font-family: 'Saudia-sans';
-    src: url('/src/assets/fonts/saudiasans-meduim/subset-SaudiaSans-Medium.eot'),
-    url('/src/assets/fonts/saudiasans-meduim/subset-SaudiaSans-Medium.eot?#iefix') format('embedded-opentype'),
-        url('/src/assets/fonts/saudiasans-meduim/subset-SaudiaSans-Medium.woff2') format('woff2'),
-        url('/src/assets/fonts/saudiasans-meduim/subset-SaudiaSans-Medium.woff') format('woff'),
-        url('/src/assets/fonts/saudiasans-meduim/subset-SaudiaSans-Medium.ttf') format('truetype');
+    src: url('/b-v2-fe/src/assets/fonts/saudiasans-meduim/subset-SaudiaSans-Medium.eot'),
+    url('/b-v2-fe/src/assets/fonts/saudiasans-meduim/subset-SaudiaSans-Medium.eot?#iefix') format('embedded-opentype'),
+        url('/b-v2-fe/src/assets/fonts/saudiasans-meduim/subset-SaudiaSans-Medium.woff2') format('woff2'),
+        url('/b-v2-fe/src/assets/fonts/saudiasans-meduim/subset-SaudiaSans-Medium.woff') format('woff'),
+        url('/b-v2-fe/src/assets/fonts/saudiasans-meduim/subset-SaudiaSans-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
   }
   @font-face {
     font-family: 'Saudia-sans';
-    src: url('/src/assets/fonts/saudiasans-semibold/subset-SaudiaSans-SemiBold.eot'),
-    url('/src/assets/fonts/saudiasans-semibold/subset-SaudiaSans-SemiBold.eot?#iefix') format('embedded-opentype'),
-        url('/src/assets/fonts/saudiasans-semibold/subset-SaudiaSans-SemiBold.woff2') format('woff2'),
-        url('/src/assets/fonts/saudiasans-semibold/subset-SaudiaSans-SemiBold.woff') format('woff'),
-        url('/src/assets/fonts/saudiasans-semibold/subset-SaudiaSans-SemiBold.ttf') format('truetype');
+    src: url('/b-v2-fe/src/assets/fonts/saudiasans-semibold/subset-SaudiaSans-SemiBold.eot'),
+    url('/b-v2-fe/src/assets/fonts/saudiasans-semibold/subset-SaudiaSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('/b-v2-fe/src/assets/fonts/saudiasans-semibold/subset-SaudiaSans-SemiBold.woff2') format('woff2'),
+        url('/b-v2-fe/src/assets/fonts/saudiasans-semibold/subset-SaudiaSans-SemiBold.woff') format('woff'),
+        url('/b-v2-fe/src/assets/fonts/saudiasans-semibold/subset-SaudiaSans-SemiBold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
