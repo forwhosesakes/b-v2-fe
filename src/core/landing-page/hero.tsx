@@ -3,13 +3,13 @@ import Glitter from "../../assets/icons/glitter.svg?react"
 import MovingStars from "../../components/moving-stars/moving-stars"
 import VideoPlayer from "../../components/video-player/video-player"
 import PreviewVid from '../../assets/vids/preview.mp4'
-import BlackholeVideo from '../../assets/vids/landing.webm'
-import PreviewThumbnail from '../../assets/images/landing-preview.svg'
-import BlackholeThumbnail from '../../assets/images/black-hole.svg'
+import BlackholeVideo from '../../assets/vids/landing.mp4'
+import PreviewThumbnail from '../../assets/images/landing-preview.webp'
+import BlackholeThumbnail from '../../assets/images/black-hole.webp'
 
 const Hero = () => {
   return (
-    <SectionWrapper id="hero" styles="bg-landing-page-image bg-no-repeat ">
+    <SectionWrapper id="hero" styles="bg-landing-page-image bg-contain bg-no-repeat ">
       <div className="md:mt-36 mt-16 flex flex-col items-center justify-center">
         <h1 className="leading-loose">بصير .. الحلول الذكية</h1>
         <h3 className="text-center text-white/60">لمجتمعات عمرانية حديثة</h3>

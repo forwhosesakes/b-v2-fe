@@ -59,7 +59,7 @@ const Detection = () => {
   }
 
   return (
-    <section className="m-5 flex flex-col items-center rounded-xl bg-landing-page-image pt-36 text-center">
+    <section className="m-5 flex flex-col items-center rounded-xl bg-landing-page-image bg-contain pt-36 text-center">
       <div className="flex w-full flex-row">
         <div className="UploadContainer align-items-center m-5 flex h-[60vh] w-full flex-col justify-center rounded-lg border border-turquoise bg-detection-gradient">
           {!mediaSrc || !mediaSrc.uploadedPath ? (

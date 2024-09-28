@@ -1,3 +1,4 @@
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 import NormalMap from '../../assets/images/reports-bg.png'
 
 type TProps = {
@@ -10,7 +11,7 @@ const ReportsMap = (props:TProps)=>{
    
    <div className="flex-1 normalMap p-0 m-0  h-[80vh] w-full">
     
-    <img className='object-fill h-full w-full' src={NormalMap} />
+    <LazyLoadImage className='object-fill h-full w-full' src={NormalMap} />
     
     
     </div>

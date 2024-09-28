@@ -22,7 +22,7 @@ const Challenges = () => {
         <Electro   className=" w-full" />
       </div>
 
-      <div className="flex md:flex-row  flex-col md:w-2/3 w-full md:p-8 p-2 items-center rounded-2xl bg-ch-radial-gradient backdrop-blur-md ">
+      <div className="flex md:flex-row  flex-col md:w-2/3 w-full md:p-8 p-2 items-center rounded-2xl  backdrop-blur-md ">
         <h2 className="md:w-min md:break-words leading-relaxed text-center">
           تحديات المدن الحديثة
         </h2>

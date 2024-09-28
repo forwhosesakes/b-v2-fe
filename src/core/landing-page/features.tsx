@@ -10,7 +10,7 @@ import GridCards from "../../components/grid-cards/grid-cards"
 import RoundedCard from "../../components/grid-cards/rounded-card"
 import SectionWrapper from "../../components/hoc/section-wrapper"
 import useMousePosition from "../../hooks/useMousePosition"
-import BlackholeVideo from '../../assets/vids/ball-in-hole-video.webm'
+import BlackholeVideo from '../../assets/vids/ball-in-hole-video.mp4'
 
 
 

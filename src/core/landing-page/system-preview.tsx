@@ -3,6 +3,7 @@ import SectionWrapper from "../../components/hoc/section-wrapper"
 import DetectionBorders from '../../assets/images/detection-process-borders.svg?react'
 import { useRef } from "react"
 import DetectiionProcessImage from '../../assets/images/detection-process-v2.png'
+import { LazyLoadImage } from "react-lazy-load-image-component"
 
 const SystemPreview = () => {
   const svgContainerRef = useRef<HTMLDivElement>(null!)
@@ -31,7 +32,7 @@ const SystemPreview = () => {
 
 
 
-      <img  src={DetectiionProcessImage}/>
+      <LazyLoadImage  src={DetectiionProcessImage}/>
 
       </div>
 

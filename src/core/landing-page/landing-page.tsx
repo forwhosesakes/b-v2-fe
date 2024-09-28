@@ -10,6 +10,7 @@ import SmartSolutions from "./smart-solutions";
 import Sustainability from "./sustainability";
 import SystemPreview from "./system-preview";
 import MockupImage from '../../assets/images/mockup.png'
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const LandingPage = () => {
   return ( <div className="flex flex-col">
@@ -23,7 +24,7 @@ const LandingPage = () => {
   <SystemPreview/>
   <Sustainability/>
   <AddedValue/>
-  <SectionWrapper styles="md:flex md:flex-row hidden" id="mockup" ><img className="w-3/5" src={MockupImage} /></SectionWrapper>
+  <SectionWrapper styles="md:flex md:flex-row hidden" id="mockup" ><LazyLoadImage className="w-3/5" src={MockupImage} /></SectionWrapper>
   <Features/>
   <SmartSolutions/>
   

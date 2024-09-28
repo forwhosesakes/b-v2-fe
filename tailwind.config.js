@@ -11,12 +11,11 @@ export default {
     extend: {
       backgroundImage: {
         'radial-gradient-border-navbar': 'radial-gradient(62.87% 100% at 50% 100%,rgba(255,255,255,.12) 0%,rgba(255,255,255,0) 100%)',
-        'landing-page-image':"url('/src/assets/images/landing.svg')",
+        'landing-page-image':"url('/src/assets/images/landing.webp')",
         'challenges-image': "url('/src/assets/images/challenges-bg.png') lightgray 50%",
         'vis-charts-before':"url('/src/assets/images/viz-charts.png')",
         'vis-charts-after':"url('/src/assets/images/viz-charts-2.png')",
         'glitter-note-gradient':'linear-gradient(180deg, rgba(229,156,255,1) 0%, rgba(186,156,255,1) 50%, rgba(156,178,255,1) 100%)',
-        'ch-radial-gradient':'radial-gradient(circle, rgba(168,127,255,0.04) 0%, rgba(168,127,255,0) 100%)',
         'bottom-black-overlay':'linear-gradient(180deg, rgba(4, 1, 21, 0.00) 0%, rgba(4, 1, 21, 0.70) 34.48%, #030014 82.36%)',
         'upper-black-overlay': 'linear-gradient(0deg, rgba(4, 1, 21, 0.00) 0%, rgba(4, 1, 21, 0.50) 34.48%, #030014 82.36%)',
         'faded-gradient':'linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.00) 100%)', 
