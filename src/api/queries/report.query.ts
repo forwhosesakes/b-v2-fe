@@ -3,7 +3,7 @@ import {
   useMutation,
   UseQueryResult,
   UseMutationResult,
-} from "@tanstack/react-query"
+} from "react-query"
 import {
   getAllReports,
   createNewReport,
@@ -15,7 +15,7 @@ export const useGetAllReports = (
   searchTerm: string,
   page: number = 1,
   limit: number = 10,
-): UseQueryResult => {
+): UseQueryResult<any> => {
   return useQuery({
     queryKey: ["reports", searchTerm, page, limit],
     queryFn: () => getAllReports(searchTerm, page, limit),

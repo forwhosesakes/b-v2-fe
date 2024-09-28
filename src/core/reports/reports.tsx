@@ -1,19 +1,25 @@
-import SectionWrapper from "../../components/hoc/section-wrapper"
-// import ReportsMap from "./reports-map"
-// import ReportsTable from "./reports-table"
 
-const Reports = ()=>{
+import ReportsMap from "./reports-map"
+import ReportsTable from "./reports-table"
 
-return <SectionWrapper styles="" direction="horzontal_to_vertical" id={"reports"} >
-{/* <ReportsMap/>
+const Reports = () => {
+  // const [heatmapMode, setHeatmapMode] = useState(false)
 
-<ReportsTable/> */}
-<></>
+  return (
+    <section
+      className="p-0! mt-36 flex flex-col "
+      id={"reports"}
+    >
+      <div className="">
+        <h2></h2>
+      </div>
 
-
-</SectionWrapper>
-
+      <div className="flex flex-row justify-between">
+        <ReportsTable />
+        <ReportsMap isHeatMap={false} />
+      </div>
+    </section>
+  )
 }
-
 
 export default Reports

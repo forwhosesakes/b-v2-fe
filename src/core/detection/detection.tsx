@@ -136,7 +136,7 @@ const Detection = () => {
         {inferenceUrl && mediaSrc?.type === "image" && (
           <button
             onClick={() => setModalIsOpen(true)}
-            className="button button-primary button-container w-fit px-16 py-2 hover:shadow-inner"
+            className="button hidden button-primary button-container w-fit px-16 py-2 hover:shadow-inner"
           >
             <span className="button-gradient-text">المقارنة</span>
           </button>

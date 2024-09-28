@@ -1,4 +1,4 @@
-import { useMutation,  } from "react-query";
+import { useMutation } from "react-query";
 import { performGeneralInference, performImageInfernce, performVideoInfernece } from "../repos/inference";
 
 export const useGetImageMutation = () => {
