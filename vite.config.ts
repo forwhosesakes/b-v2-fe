@@ -5,6 +5,7 @@ import svgr from "vite-plugin-svgr";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/bv2/",
   plugins: [react(),svgr(),],
   build: {
     chunkSizeWarningLimit: 1000,
