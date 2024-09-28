@@ -29,28 +29,6 @@
   }
 
 
-  @font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url(/src/assets/fonts/montserrat-arabic-bold/montserrat-arabic-bold.ttf) format('opentype');
-  }
-  @font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(/src/assets/fonts/montserrat-arabic-regular/montserrat-arabic-regular.ttf) format('opentype');
-  }
-  @font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: url(/src/assets/fonts/montserrat-arabic-light/montserrat-arabic-light.ttf) format('opentype');
-  }
-
 
   @font-face {
     font-family: 'Saudia-sans';
