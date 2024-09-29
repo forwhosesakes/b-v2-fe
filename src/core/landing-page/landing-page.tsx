@@ -24,7 +24,7 @@ const LandingPage = () => {
   <SystemPreview/>
   <Sustainability/>
   <AddedValue/>
-  <SectionWrapper styles="md:flex md:flex-row hidden" id="mockup" ><LazyLoadImage className="w-3/5" src={MockupImage} /></SectionWrapper>
+  <SectionWrapper styles="md:flex md:flex-row hidden" id="mockup" ><LazyLoadImage className="w-3/5" src={MockupImage} loading="lazy" /></SectionWrapper>
   <Features/>
   <SmartSolutions/>
   
