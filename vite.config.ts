@@ -19,16 +19,7 @@ export default defineConfig({
       // necessary for segment analytics lib to work
       global: {},
     },
-    server: {
-      proxy: {
-      
-        // string shorthand: http://localhost:5173/foo -> http://localhost:4567/foo
-        '/gradio': {
-    
-          target:'https://58984b15f35aa029c3.gradio.live',
-        changeOrigin:false, 
-        rewrite: (path) => path.replace(/gradio/, ''),
-        },}}
+   
 
 
 })
