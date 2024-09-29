@@ -1,6 +1,6 @@
 const isElementInViewPort = (element:HTMLElement)=>{
 
-var rect = element.getBoundingClientRect();
+const rect = element.getBoundingClientRect();
 
 return (
     rect.top >= 0 &&
