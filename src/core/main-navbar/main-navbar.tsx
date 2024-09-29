@@ -97,12 +97,6 @@ const MainNavbar = () => {
           <button className="m-3 rounded-lg border border-primary/60 bg-gradient-to-b from-tertiary/75 to-tertiary/20 px-3 py-1 md:text-sm text-xs shadow-inner shadow-tertiary hover:shadow-2xl">
             <Link to="/b-v2-fe/detection">ابدأ الخدمة</Link>
           </button>
-
-          {/* <ButtonGroup
-            selectedItem={supportedLanguages[0]}
-            items={supportedLanguages}
-            onSelectionChange={(id) => {}}
-          /> */}
         </div>
       </div>
       <div className="h-[2px] w-full bg-radial-gradient-border-navbar" />
