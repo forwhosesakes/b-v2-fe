@@ -7,19 +7,19 @@ import LandingPage from "../core/landing-page/landing-page";
 
 const router = createBrowserRouter([
   {
-    path: "/b-v2-fe/",
+    path: "/",
     element: <App />,
     children:[
       {
-        path: "/b-v2-fe/",
+        path: "/",
         element: <LandingPage />,
       },
       {
-        path: "/b-v2-fe/detection",
+        path: "detection",
         element: <Detection />,
       },
       {
-        path: "/b-v2-fe/reports",
+        path: "reports",
         element: <Reports />,
       },
   
