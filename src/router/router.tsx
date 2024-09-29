@@ -8,11 +8,11 @@ const Reports = lazy(() => import("../core/reports/reports"));
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/b-v2-fe/",
     element: <App />,
     children: [
       {
-        path: "/",
+        path: "/b-v2-fe/",
         element: (
           <Suspense fallback={<div>Loading...</div>}>
             <LandingPage />
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "detection",
+        path: "/b-v2-fe/detection",
         element: (
           <Suspense fallback={<div>Loading...</div>}>
             <Detection />
@@ -28,7 +28,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "reports",
+        path: "/b-v2-fe/reports",
         element: (
           <Suspense fallback={<div>Loading...</div>}>
             <Reports />
