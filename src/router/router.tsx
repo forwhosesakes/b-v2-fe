@@ -1,33 +1,42 @@
 import { createBrowserRouter } from "react-router-dom";
-import Detection from "../core/detection/detection";
-import Reports from "../core/reports/reports";
+import { Suspense, lazy } from "react";
 import App from "../App";
-import LandingPage from "../core/landing-page/landing-page";
 
+const LandingPage = lazy(() => import("../core/landing-page/landing-page"));
+const Detection = lazy(() => import("../core/detection/detection"));
+const Reports = lazy(() => import("../core/reports/reports"));
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    children:[
+    children: [
       {
         path: "/",
-        element: <LandingPage />,
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <LandingPage />
+          </Suspense>
+        ),
       },
       {
         path: "detection",
-        element: <Detection />,
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <Detection />
+          </Suspense>
+        ),
       },
       {
         path: "reports",
-        element: <Reports />,
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <Reports />
+          </Suspense>
+        ),
       },
-  
-    ]
+    ],
   },
- 
- 
 ]);
 
-
-  export default router
+export default router;
