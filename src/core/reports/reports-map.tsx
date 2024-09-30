@@ -59,10 +59,7 @@ const ReportsMap = (props:TProps)=>{
    <div className={`flex-1 normalMap p-0 m-0  h-[80vh] w-full relative`}>
    {props.report && <ReportMapPopup y={combinations[random].y} x={combinations[random].x}  report={props.report} />} 
     
-    <LazyLoadImage  effect="blur"
-        wrapperProps={{
-            style: {transitionDelay: "0.25s"},
-        }} className='object-fill h-full w-full' src={NormalMap} />
+    <LazyLoadImage  className='object-fill h-full w-full' src={NormalMap} />
     
     
     </div>

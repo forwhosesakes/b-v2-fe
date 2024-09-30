@@ -93,7 +93,7 @@ export default {
 
       fontFamily:{
         primary:"Saudia-sans",
-        roboto: ["Roboto", "sans-serif"],
+    
       },
       textShadow: {
         sm: '0 1px 2px var(--tw-shadow-color)',
