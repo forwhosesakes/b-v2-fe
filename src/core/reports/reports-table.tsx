@@ -1,18 +1,19 @@
 import { useState } from "react"
 import { useGetAllReports } from "../../api/queries/report.query"
 // import SearchbarIcon from "../../assets/icons/search.svg?react"
-import ReportRow from "./report-row"
+import ReportRow from "./report-row.tsx"
 import LeftArrowIcon from "../../assets/icons/left-arrow.svg?react"
 import RightArrowIcon from "../../assets/icons/right-arrow.svg?react"
-import CicrularProgress from "../../components/skeleton/circular-progress"
+import CicrularProgress from "../../components/skeleton/circular-progress.tsx"
 
-// type TProps = {
-//   onReportSelect: () => void
-// }
+type TProps = {
+  onReportSelect: (report:ReportEntity) => void, selectedReport:ReportEntity|undefined
+}
 
-const ReportsTable = () => {
+const ReportsTable = (props:TProps) => {
   // const [searchTerm, setSearchTerm] = useState("")
   const [page, setPage] = useState(3)
+
   const { isLoading, isError, data, isFetching } = useGetAllReports(
     "",
     page,
@@ -48,7 +49,7 @@ const ReportsTable = () => {
         ) : (
           <div>
             {data.data.reports.map((report: any) => (
-              <ReportRow report={report} key={report.id} selected={false} />
+              <ReportRow onSelect={()=>props.onReportSelect(report)} report={report} key={report.id} selected={props.selectedReport?report.id === props.selectedReport.id:false} />
             ))}
           </div>
         )}
@@ -68,7 +69,7 @@ const ReportsTable = () => {
                 
               }}
               // Disable the Next Page button until we know a next page is available
-              // disabled={!data?.hasMore}
+              disabled={page>5}
             >
               <RightArrowIcon width={24} height={24} />
             </button>

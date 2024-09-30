@@ -1,4 +1,4 @@
-import Graph from "../graph"
+import Graph from "../graph.tsx"
 
 import InterfaceLight from '../../../assets/images/interfaces-lights.svg'
 import demodevices from '../../../assets/images/demo-devices.webp'

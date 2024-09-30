@@ -1,8 +1,8 @@
 import { useRef } from "react"
-import Chip from "../../components/chip/chip"
-import GridCards from "../../components/grid-cards/grid-cards"
-import SharpCard from "../../components/grid-cards/sharp-card"
-import SectionWrapper from "../../components/hoc/section-wrapper"
+import Chip from "../../components/chip/chip.tsx"
+import GridCards from "../../components/grid-cards/grid-cards.tsx"
+import SharpCard from "../../components/grid-cards/sharp-card.tsx"
+import SectionWrapper from "../../components/hoc/section-wrapper.tsx"
 import SideElectro from "../../assets/images/side-electro.svg?react"
 
 const AddedValue = () => {

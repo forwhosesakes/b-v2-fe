@@ -1,4 +1,4 @@
-import SectionWrapper from "../../components/hoc/section-wrapper";
+import SectionWrapper from "../../components/hoc/section-wrapper.tsx";
 import Electro from '../../assets/images/electro.svg?react'
 import { useRef } from "react";
 

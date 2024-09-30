@@ -1,5 +1,5 @@
-import MarkerCircle from "../../marker-circle/marker-circle"
-import Graph from "../graph"
+import MarkerCircle from "../../marker-circle/marker-circle.tsx"
+import Graph from "../graph.tsx"
 import CardMapCircle from '../../../assets/images/card-interactive-maps-circle.png'
 import { LazyLoadImage } from "react-lazy-load-image-component"
 const InteractiveMaps = ()=>{

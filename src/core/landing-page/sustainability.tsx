@@ -1,4 +1,4 @@
-import SectionWrapper from "../../components/hoc/section-wrapper"
+import SectionWrapper from "../../components/hoc/section-wrapper.tsx"
 import sustailabilityImage from '../../assets/images/sustailability.png'
 import { LazyLoadImage } from "react-lazy-load-image-component"
 

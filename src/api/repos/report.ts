@@ -1,4 +1,4 @@
-import httpClient from "./httpClient";
+import httpClient from "./httpClient.ts";
 
 export const getAllReports = async (searchTerm:string,page:number=1, limit:number=10 ) => {
   

@@ -1,4 +1,4 @@
-import Graph from "../graph"
+import Graph from "../graph.tsx"
 import CardGhostBox from '../../../assets/images/card-ghost-box.svg?react'
 const VisCharts = ()=>{
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import isElementInViewPort from '../utils/element-in-viewport';
+import isElementInViewPort from '../utils/element-in-viewport.ts';
 type TProps= {
     relativeContainerRef?: React.MutableRefObject<HTMLDivElement>
 }

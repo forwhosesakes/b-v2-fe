@@ -1,4 +1,4 @@
-import httpClient from "./httpClient";
+import httpClient from "./httpClient.ts";
 
 export const performImageInfernce = async (formData:any) => {
   

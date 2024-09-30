@@ -1,5 +1,5 @@
 import {  useRef, useState } from "react"
-import PlayButton from "./play-button"
+import PlayButton from "./play-button.tsx"
 
 type TProps = {
   play?: () => void

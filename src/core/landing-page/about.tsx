@@ -1,5 +1,5 @@
-import Chip from "../../components/chip/chip";
-import SectionWrapper from "../../components/hoc/section-wrapper";
+import Chip from "../../components/chip/chip.tsx";
+import SectionWrapper from "../../components/hoc/section-wrapper.tsx";
 import DemoDevices from '../../assets/images/demo-devices.webp'
 import { LazyLoadImage } from "react-lazy-load-image-component";
 const About = () => {

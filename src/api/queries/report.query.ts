@@ -8,7 +8,7 @@ import {
   getAllReports,
   createNewReport,
   getSingleReport,
-} from "../repos/report"
+} from "../repos/report.ts"
 
 // Hook for getting all reports
 export const useGetAllReports = (

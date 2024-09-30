@@ -4,10 +4,10 @@ import FileUploadIcon from "../../assets/icons/upload.svg?react"
 import AddIcon from "../../assets/icons/add.svg?react"
 
 import { useGetInferenceMutation } from "../../api/queries/inference.query"
-import CicrularProgress from "../../components/skeleton/circular-progress"
+import CicrularProgress from "../../components/skeleton/circular-progress.tsx"
 import Modal from "react-modal"
 import ComparisionModal from "./comparisionModal/comparisionModal"
-import MediaWithProgressOverlay from "../../components/media-with-progress-overlay"
+import MediaWithProgressOverlay from "../../components/media-with-progress-overlay.tsx"
 
 type MediaSource = {
   uploadedPath: string

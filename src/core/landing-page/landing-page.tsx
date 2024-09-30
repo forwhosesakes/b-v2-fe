@@ -1,14 +1,14 @@
-import SectionWrapper from "../../components/hoc/section-wrapper";
-import About from "./about";
-import AddedValue from "./added-value";
-import Challenges from "./challenges";
-import Features from "./features";
-import Hero from "./hero";
-import Outro from "./outro";
-import PollutionTypes from "./pollution-types";
-import SmartSolutions from "./smart-solutions";
-import Sustainability from "./sustainability";
-import SystemPreview from "./system-preview";
+import SectionWrapper from "../../components/hoc/section-wrapper.tsx";
+import About from "./about.tsx";
+import AddedValue from "./added-value.tsx";
+import Challenges from "./challenges.tsx";
+import Features from "./features.tsx";
+import Hero from "./hero.tsx";
+import Outro from "./outro.tsx";
+import PollutionTypes from "./pollution-types.tsx";
+import SmartSolutions from "./smart-solutions.tsx";
+import Sustainability from "./sustainability.tsx";
+import SystemPreview from "./system-preview.tsx";
 import MockupImage from '../../assets/images/mockup.png'
 import { LazyLoadImage } from "react-lazy-load-image-component";
 

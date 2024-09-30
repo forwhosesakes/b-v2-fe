@@ -1,5 +1,5 @@
-import Capsule from "../../capsule/capsule"
-import Graph from "../graph"
+import Capsule from "../../capsule/capsule.tsx"
+import Graph from "../graph.tsx"
 import IndicatorBlur from '../../../assets/images/indicator-blur.png'
 import { LazyLoadImage } from "react-lazy-load-image-component";
 

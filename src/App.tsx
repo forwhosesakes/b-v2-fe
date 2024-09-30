@@ -1,7 +1,7 @@
 import { QueryClient, QueryClientProvider } from "react-query";
 
 import { Outlet } from "react-router-dom";
-import MainNavbar from "./core/main-navbar/main-navbar";
+import MainNavbar from "./core/main-navbar/main-navbar.tsx";
 function App() {
   const queryClient = new QueryClient()
 

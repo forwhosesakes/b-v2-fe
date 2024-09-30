@@ -1,4 +1,4 @@
-import Graph from "../graph"
+import Graph from "../graph.tsx"
 import IndicatorPoint from '../../../assets/images/indicator-point.png'
 import { LazyLoadImage } from "react-lazy-load-image-component"
 

@@ -1,5 +1,5 @@
 import { useRef } from "react"
-import SectionWrapper from "../../components/hoc/section-wrapper"
+import SectionWrapper from "../../components/hoc/section-wrapper.tsx"
 import Union from '../../assets/images/union.svg?react'
 import SmartSolutionImage from '../../assets/images/smart-solutions.png'
 import { LazyLoadImage } from "react-lazy-load-image-component"

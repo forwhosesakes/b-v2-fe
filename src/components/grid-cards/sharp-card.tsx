@@ -1,4 +1,4 @@
-import SvgIcon from "../icon/icon"
+import SvgIcon from "../icon/icon.tsx"
 type TProps = {
 title:string, 
 icon:string, 
