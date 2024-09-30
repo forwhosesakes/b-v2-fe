@@ -2,6 +2,9 @@ import Chip from "../../components/chip/chip.tsx";
 import SectionWrapper from "../../components/hoc/section-wrapper.tsx";
 import DemoDevices from '../../assets/images/demo-devices.webp'
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
+
 const About = () => {
   return (
     <SectionWrapper direction={"horzontal_to_vertical"}  id="about" styles="relative mt-16">
@@ -24,8 +27,17 @@ const About = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-[540px] md:h-[540px] w-[340px] h-[340px] border border-slate-300/25 rounded-full opacity-50 animate-pulse-slowest"></div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-[480px] md:h-[480px] w-[280px] h-[280px] border border-slate-400/25 rounded-full opacity-50 animate-pulse-slow"></div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-[440px] md:h-[440px] w-[240px] h-[240px] border border-slate-400/25 rounded-full opacity-50 animate-pulse blurry-light"></div>
-      <LazyLoadImage className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-[400px] md:h-[400px] w-[280px] h-[280px]rounded-full object-contain z-50"  src={DemoDevices}/>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-[400px] md:h-[400px] w-[280px] h-[280px] rounded-full z-50">
+      <LazyLoadImage 
+
+       effect="blur"
+        wrapperProps={{
+            style: {transitionDelay: "0.25s"},
+        }} className=" object-contain mt-5 "  src={DemoDevices}/>
      
+
+      </div>
+   
      
     </div>
     </SectionWrapper>

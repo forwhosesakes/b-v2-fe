@@ -11,6 +11,7 @@ import Sustainability from "./sustainability.tsx";
 import SystemPreview from "./system-preview.tsx";
 import MockupImage from '../../assets/images/mockup.png'
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const LandingPage = () => {
   return ( <div className="flex flex-col">
@@ -24,7 +25,10 @@ const LandingPage = () => {
   <SystemPreview/>
   <Sustainability/>
   <AddedValue/>
-  <SectionWrapper styles="md:flex md:flex-row hidden" id="mockup" ><LazyLoadImage className="w-3/5" src={MockupImage} loading="lazy" /></SectionWrapper>
+  <SectionWrapper styles="md:flex md:flex-row hidden" id="mockup" ><LazyLoadImage  effect="blur"
+        wrapperProps={{
+            style: {transitionDelay: "0.25s",justifyContent:"center", display:"flex"},
+        }} className="w-3/5" src={MockupImage} loading="lazy" /></SectionWrapper>
   <Features/>
   <SmartSolutions/>
   

@@ -2,6 +2,7 @@ import Capsule from "../../capsule/capsule.tsx"
 import Graph from "../graph.tsx"
 import IndicatorBlur from '../../../assets/images/indicator-blur.png'
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const AdvancedIndicator = ()=>{
 
@@ -9,7 +10,12 @@ const AdvancedIndicator = ()=>{
 
 
     return <Graph>
-        <LazyLoadImage className="absolute w-full h-full z-0 " src={IndicatorBlur}/>
+        <LazyLoadImage
+         effect="blur"
+         wrapperProps={{
+             style: {transitionDelay: "0.25s"},
+         }}
+        className="absolute w-full h-full z-0 " src={IndicatorBlur}/>
        
         <div className="relative group w-full h-full z-10 capsules">
             <div>
