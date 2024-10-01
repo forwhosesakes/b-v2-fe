@@ -20,8 +20,8 @@ const onSectionEnter = ()=>{
     direction={"horizontal"} screenSized={true} styles="justify-between p-0 my-20 md:flex hidden">
          <LazyLoadImage  effect="blur"
         wrapperProps={{
-            style: {transitionDelay: "0.25s"},
-        }} className="w-1/2" src={SmartSolutionImage}/>
+            style: {transitionDelay: "0.25s", width:"50%"},
+        }} className="w-full" src={SmartSolutionImage}/>
          
         <div ref={svgDevContainer} className="ml-48  overflow-hidden h-96 w-48">
             <Union  className="h-full"/>

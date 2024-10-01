@@ -14,25 +14,25 @@ const router = createBrowserRouter([
       {
         path: "/b-v2-fe/",
         element: (
-          <Suspense fallback={<div>Loading...</div>}>
+        
             <LandingPage />
-          </Suspense>
+      
         ),
       },
       {
         path: "/b-v2-fe/detection",
         element: (
-          <Suspense fallback={<div>Loading...</div>}>
+         
             <Detection />
-          </Suspense>
+    
         ),
       },
       {
         path: "/b-v2-fe/reports",
         element: (
-          <Suspense fallback={<div>Loading...</div>}>
+        
             <Reports />
-          </Suspense>
+        
         ),
       },
     ],

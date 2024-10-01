@@ -69,9 +69,19 @@ export default {
            
             opacity: '1'
           }
-        }
+        },
+         dash: {
+          'from': {
+            'stroke-dashoffset': '320', 
+            
+            // /* fill: transparent; */
+          },
+          'to': {
+            'stroke-dashoffset': '0'
+            /* stroke: transparent; */
+          }
 
-       
+        }
       },
       
       colors:{
@@ -106,6 +116,7 @@ export default {
   plugins: [
     plugin(function ({ addUtilities }) {
       addUtilities({
+       
         '.bg-overlay': {
           'background': "url('/src/assets/images/challenges-bg.png') lightgray 50% / cover no-repeat",
           'background-position': 'center',
@@ -190,6 +201,13 @@ export default {
           'background': 'rgba(255, 255, 255, 0.00)',
           'box-shadow': '0px -7px 11px 0px rgba(164, 143, 255, 0.12) inset',
           'backdrop-filter':' blur(2px)',
+        }, 
+       '.path-formation svg path': {
+         'stroke-dasharray': "320",
+          'stroke-dashoffset': '0',
+  
+          'animation': 'dash 3s linear'
+         
         }
 
 

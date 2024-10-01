@@ -73,6 +73,7 @@
 }
 html {
   scroll-behavior: smooth;
+
 }
 :root {
   font-family: Saudia-sans,Montserrat, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -81,7 +82,7 @@ html {
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color:#030014 ;
+  background-color:#060019 ;
 
 
   font-synthesis: none;
@@ -104,7 +105,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed; */
-  background-color:#030014 ;
+  background-color:#060019 ;
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -804,12 +805,14 @@ align-items: center;
   width: 100%
 }
 
-.path-formation svg path {
+
+/* .path-formation svg path {
   stroke-dasharray: 320;
   stroke-dashoffset: 0;
-  animation: dash 3s linear;
+  fill: red;
+  animation: dash 3s ;
   animation-fill-mode: forwards ;
-}
+} */
 
 
 @keyframes borderTurn {
@@ -835,18 +838,7 @@ align-items: center;
 }
 
 
-@keyframes dash {
-  from {
-    stroke-dashoffset: 320;
-    /* fill: transparent; */
-  }
-  to {
-    stroke-dashoffset: 0;
-    /* stroke: transparent; */
-  }
 
-  
-}
 
 @keyframes slideIn {
   0% {

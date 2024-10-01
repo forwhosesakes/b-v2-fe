@@ -10,14 +10,9 @@ const Interfaces = ()=>{
 
 return <Graph >
     
-    <LazyLoadImage  effect="blur"
-        wrapperProps={{
-            style: {transitionDelay: "0.25s"},
-        }} className="absolute w-1/2 m-auto inset-0 bg-blend-darken " src ={demodevices}/>
-    <LazyLoadImage  effect="blur"
-        wrapperProps={{
-            style: {transitionDelay: "0.25s"},
-        }} className="absolute" src={InterfaceLight}/>
+    <LazyLoadImage  
+        className="absolute w-1/2 m-auto inset-0 bg-blend-darken " src ={demodevices}/>
+    <LazyLoadImage  src={InterfaceLight}/>
 </Graph>
 }
 
