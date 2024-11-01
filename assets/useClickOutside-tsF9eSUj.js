@@ -1,1 +1,0 @@
-import{r as o}from"./index-BoqPuKA5.js";const u=({ref:e,onClickOutside:n})=>{o.useEffect(()=>{const t=r=>{!e.current||e.current.contains(r.target)||n()};return document.addEventListener("mousedown",t),document.addEventListener("touchstart",t),()=>{document.removeEventListener("mousedown",t),document.removeEventListener("touchstart",t)}},[e,n])};export{u};

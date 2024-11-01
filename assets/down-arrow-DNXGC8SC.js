@@ -1,1 +1,0 @@
-import{r as t}from"./index-BoqPuKA5.js";import"./mapbox-BQctAmbH.js";const n=e=>t.createElement("svg",{xmlns:"http://www.w3.org/2000/svg",width:20,height:20,viewBox:"0 0 20 20",fill:"none",...e},t.createElement("path",{d:"M5 7.5L10 12.5L15 7.5",stroke:"#667085",strokeWidth:1.66667,strokeLinecap:"round",strokeLinejoin:"round"}));export{n as default};
