@@ -9,7 +9,6 @@ import PollutionTypes from "./pollution-types";
 import SmartSolutions from "./smart-solutions";
 import Sustainability from "./sustainability";
 import SystemPreview from "./system-preview";
-import MockupImage from '/assets/images/mockup.png'
 
 import {LazyLoadImage} from 'react-lazy-load-image-component';
 

@@ -1,8 +1,6 @@
 
 
 import React ,{ useState } from 'react';
-import Play from '/assets/icons/play.svg'
-import Pause from '/assets/icons/pause.svg'
 
 
 type TProps = {
@@ -11,15 +9,15 @@ type TProps = {
 
 
 const PlayButton = ({onClick, styles, isPlaying}: TProps  )=>{
-    const [isActive, setIsActive] = useState(false);
+    const [isActivated, setIsActivated] = useState(false);
 
     return <div className={`${styles} video-cont`}>
       
       
       <div
-        className={`glowing-box p-5 ${isActive ? 'glowing-box-active' : ''} `}
-        onMouseEnter={() => setIsActive(true)}
-        onMouseLeave={() => setIsActive(false)}
+        className={`glowing-box p-5 ${isActivated ? 'glowing-box-active' : ''} `}
+        onMouseEnter={() => setIsActivated(true)}
+        onMouseLeave={() => setIsActivated(false)}
 
       >
         <div className="glowing-box-animations">
@@ -38,9 +36,7 @@ const PlayButton = ({onClick, styles, isPlaying}: TProps  )=>{
         onClick={onClick}
         className=' flex flex-row items-center justify-between'>
         
-       {<> <span  className={`text-xs font-semibold text-white/90 transition-text-display text-nowrap ${isActive&&' ml-4'}`}>{isActive&&"كيفية عمل بصير"} </span> {isPlaying? <img src='/assets/icons/pause.svg' width={"20px"} height={"20px"}/>:<img src='/assets/icons/play.svg' />}</>   }
-        
-        
+       {<> <span  className={`text-xs font-semibold text-white/90 transition-text-display text-nowrap ${isActivated&&' ml-4'}`}>{isActivated&&"كيفية عمل بصير"} </span> {isPlaying? <img src='/assets/icons/pause.svg' width={"20px"} height={"20px"}/>:<img src='/assets/icons/play.svg' />}</>   }
        </button>
      
 

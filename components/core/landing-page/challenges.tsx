@@ -1,5 +1,4 @@
 import SectionWrapper from "../../hoc/section-wrapper";
-import Electro from '/assets/images/electro.svg'
 import { useRef } from "react";
 
 const Challenges = () => {
@@ -8,16 +7,15 @@ const Challenges = () => {
   const svgContainerRef = useRef<HTMLDivElement>(null!)
 
   const onStartAnimation = ()=>{
-    svgContainerRef.current.classList.add("path-formation")
     
   }
   return (
     <SectionWrapper
     id="challenges"
     onSectionVisible={onStartAnimation}
-    styles="relative  bg-overlay  my-48">
+    styles="relative  bg-overlay  mt-96 mb-16">
       <div className="absolute bottom-0 w-full bg-bottom-black-overlay h-96" />
-      <div ref={svgContainerRef} className="absolute top-0 w-full bg-upper-black-overlay h-96">
+      <div ref={svgContainerRef} className="path-formation  test-tailwind absolute top-0 w-full bg-upper-black-overlay h-96">
     
         <img src="/assets/images/electro.svg"   className=" w-full" />
       </div>

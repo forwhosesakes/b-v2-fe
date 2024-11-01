@@ -1,7 +1,6 @@
 import Graph from "../graph"
 import Image from 'next/image'; 
 
-import CardGhostBox from '/assets/images/card-ghost-box.svg'
 const VisCharts = ()=>{
 
 return  <Graph>

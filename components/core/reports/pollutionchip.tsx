@@ -1,4 +1,5 @@
-import { pollutionCategoriesMap } from "../../../constants/categories-map"
+import { pollutionCategoriesMap } from "./constants"
+
 
 
 type TProps = {

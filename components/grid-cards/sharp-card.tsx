@@ -1,4 +1,3 @@
-import SvgIcon from "../icon/icon"
 type TProps = {
 title:string, 
 icon:string, 

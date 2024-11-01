@@ -12,14 +12,20 @@ const VideoPlayer = (props: TProps) => {
   const ref = useRef<HTMLVideoElement>(null!)
   const [isVideoPlaying, setIsVideoPlaying] = useState(false)
   const [mouseHovered, setMouseHovered] = useState(false)
+
+  const toggleVideo = ()=>{
+    setIsVideoPlaying(prev=> !prev)
+
+    return isVideoPlaying? ref.current.pause():ref.current.play()    
+  }
   
 
-  return (
-    <div
+  return (  <div
     
     
     onMouseEnter= {()=>setMouseHovered(true)}
     onMouseLeave={()=>setMouseHovered(false)}
+
     
     className={`video-player relative  ${props.styles}`}>
       
@@ -27,14 +33,7 @@ const VideoPlayer = (props: TProps) => {
        {(!isVideoPlaying || (mouseHovered && isVideoPlaying))&&
         <PlayButton
         isPlaying={ isVideoPlaying}
-        onClick={
-          ()=>{    
-            isVideoPlaying? ref.current.pause():ref.current.play()    
-         
-           setIsVideoPlaying(prev=> !prev)
-          } } styles={"top-1/2"} />
-       
-       
+        onClick={toggleVideo} styles={"top-1/2"} />
        } 
       
 

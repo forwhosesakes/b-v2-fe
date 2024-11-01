@@ -9,14 +9,15 @@ import PollutionChip from "./pollutionchip"
 const ReportRow = (props: TProps) => {
   return (
     <div
+    key={props.report.id}
     onClick={()=>props.onSelect()}
       className={`flex w-full justify-between py-3 pl-2 pr-5 border-b border-b-white/30 transition-all hover:bg-white/5 ${props.selected && "bg-white/5"}`}
     >
       <p className="w-64  ">{props.report.title}</p>
 
       <div className="flex gap-x-5  w-64 ">
-        {props.report.categories.map((cat: any) => {
-          return <PollutionChip category={cat} key={cat.id} />
+        {props.report.categories.map((cat: any, index) => {
+          return <PollutionChip key={index} category={cat} />
         })}
       </div>
 

@@ -10,8 +10,6 @@ type TProps =  {
 function SvgIcon(props: TProps) {
   const { iconName, wrapperStyle, svgProp } = props;
   const { loading, SvgIcon } = useDynamicSvgImport(iconName);
-  // console.log("error :  ", error);
-  
 
   return (
     <>

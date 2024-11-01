@@ -14,7 +14,7 @@ import {
 export const useGetAllReports = (
   searchTerm: string,
   page: number = 1,
-  limit: number = 10,
+  limit: number = 12,
 ): UseQueryResult<any> => {
   return useQuery({
     queryKey: ["reports", searchTerm, page, limit],

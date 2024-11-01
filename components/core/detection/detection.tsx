@@ -1,7 +1,6 @@
-import { useCallback, useEffect, useState } from "react"
+import { useCallback, useState } from "react"
 import { useDropzone } from "react-dropzone"
-import FileUploadIcon from "/assets/icons/upload.svg"
-import AddIcon from "/assets/icons/add.svg"
+
 
 import { useGetInferenceMutation } from "../../../api/queries/inference.query"
 import CicrularProgress from "../../skeleton/circular-progress"
@@ -63,9 +62,9 @@ const Detection = () => {
   }
 
   return (
-    <section className="m-5 flex flex-col items-center rounded-xl bg-landing-page-image bg-contain pt-36 text-center">
-      <div className="flex w-full flex-row">
-        <div className="UploadContainer align-items-center m-5 flex h-[60vh] w-full flex-col justify-center rounded-lg border border-turquoise bg-detection-gradient">
+    <section className="m-5 flex flex-col items-center rounded-xl bg-landing-page-image bg-cover pt-36 text-center">
+      <div className="flex w-full md:flex-row flex-col">
+        <div className="UploadContainer align-items-center m-5 flex h-[60vh] w-full flex-col justify-center rounded-lg border border-turquoise bg-detection-gradient bg-cover">
           {!mediaSrc || !mediaSrc.uploadedPath ? (
             <div
               className="w-100 flex flex-1 flex-col items-center justify-center p-5 text-center"
@@ -97,7 +96,7 @@ const Detection = () => {
           )}
         </div>
 
-        <div className="InferenceConatiner align-items-center m-5 flex h-[60vh] w-full flex-col justify-center rounded-lg border border-turquoise bg-detection-gradient">
+        <div className="InferenceConatiner align-items-center m-5 flex h-[60vh] w-full flex-col justify-center rounded-lg border border-turquoise bg-detection-gradient bg-cover">
           <div className="relative h-full w-full">
             {mediaSrc?.type === "image" && inferenceUrl && (
               <img
@@ -117,7 +116,7 @@ const Detection = () => {
             )}
           </div>
         </div>
-      </div>
+      </div> 
 
       {/* Action buttons */}
       <div className="flex w-fit flex-row justify-between gap-6">

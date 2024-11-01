@@ -38,7 +38,7 @@ const AdvancedIndicator = ()=>{
        
          
 
-            <div className="absolute z-40 w-fit  group-hover:-translate-y-16  left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-3 p-2 bg-textbox-gradient rounded-lg">
+            <div className="absolute z-40 w-fit  group-hover:-translate-y-12  left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-3 p-2 bg-textbox-gradient rounded-lg">
             <p className="text-light text-nowrap  text-sm">بيانات تساهم في اتخاذ  القرار</p>
             <p className="text-white/40  text-nowrap text-xs">فرص المستقبل تبنى بقرارات اليوم!</p>
         </div>

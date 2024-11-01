@@ -1,9 +1,8 @@
 "use client";
-import Reports from '@/components/core/reports/reports'
-import React from 'react'
+
+import { redirect } from 'next/navigation';
 
 export default function ReportsPage() {
-  return (
-   <Reports/>
-  )
+  redirect('/reports/neighbor');
+
 }

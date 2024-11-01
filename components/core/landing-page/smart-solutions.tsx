@@ -1,7 +1,5 @@
 import { useRef } from "react"
 import SectionWrapper from "../../hoc/section-wrapper"
-import Union from '/assets/images/union.svg'
-import SmartSolutionImage from '/assets/images/smart-solutions.png'
 import {LazyLoadImage} from 'react-lazy-load-image-component';
 
 import 'react-lazy-load-image-component/src/effects/blur.css';

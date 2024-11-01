@@ -7,6 +7,8 @@ on:
 #Allow repo secrets
 env:
   VITE_SERVER: ${{ secrets.VITE_SERVER }}
+  VITE_ACCESS_TOKEN: ${{secrets.VITE_ACCESS_TOKEN}}
+
 
 jobs:
   build:
