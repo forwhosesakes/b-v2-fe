@@ -1,10 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 
+    basePath: "/b-v2-fe",
 
-    basePath: '/b-v2',
     output: "export",
-  reactStrictMode: true,
+
+  images: {
+    unoptimized: true,
+  },
+
+ 
 };
 
 export default nextConfig;
