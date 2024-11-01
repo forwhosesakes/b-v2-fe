@@ -18,7 +18,7 @@ export default defineConfig({
         // Separate chunks for different vendors
         manualChunks: {
           'chart': ['chart.js'],
-          'mapbox': ['mapbox-gl'],
+       
      
         },
       },
@@ -28,7 +28,7 @@ export default defineConfig({
   },
     // Optimize dependencies
     optimizeDeps: {
-      include: ['chart.js', 'mapbox-gl', "react-chartjs-2"],
+      include: ['chart.js', "react-chartjs-2"],
       // Exclude large features you don't use
       exclude: ['chart.js/auto'],
     },

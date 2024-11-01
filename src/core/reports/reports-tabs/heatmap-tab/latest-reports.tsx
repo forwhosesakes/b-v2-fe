@@ -1,5 +1,5 @@
-import { useState } from "react"
 import HeatMapSideBar from "../../../../assets/images/heatmap-sidebar.svg?react"
+import ChartImage from "../../../../assets/images/chart-pie.webp"
 import {
   Table,
   TableBody,
@@ -9,9 +9,6 @@ import {
   TableRow,
 } from "../../../../components/paginated-table/table-components"
 import { reportStatus } from "../../constants"
-import { Chart as ChartJS, registerables } from 'chart.js';
-import { Doughnut} from 'react-chartjs-2';
-
 type ColumnData = {
   location: string
   reportType: string
@@ -27,35 +24,11 @@ const data: ColumnData[] = [
   { location: "جادة صفا", reportType: "حواجز", color: 2 },
   { location: " دارة صفا", reportType: "تسرب", color: 1 },
   { location: "شاهقة", reportType: "كتابة على الجدران", color: 2 },
-  { location: "  الماجدية", reportType: "رمال", color: 0 },
+  { location: "الماجدية", reportType: "رمال", color: 0 },
 ]
-ChartJS.register(...registerables);
 const LatestReports = () => {
 
-  const [chartData] = useState({
- 
-        labels: [
-          'حواجز',
-          'نفايات',
-          'تسرب مياه',
-          'عشوائية',
-          'حفر',
-          'أعمال طرق'
-        ],
-        datasets: [{
-          data: [20, 28, 10, 27, 5, 12],
-          backgroundColor: [
-            '#73BCA1',
-            '#99C27D',
-            '#E1C357',
-            '#DCA557',
-            '#57AFCE',
-            "#DA9167"
-          ],
-          hoverOffset: 4
-        }]
-    }
-   );
+
 
   return (
     <div className="relative w-1/4 text-center">
@@ -85,7 +58,7 @@ const LatestReports = () => {
           ))}
         </TableBody>
       </Table>
-      <Doughnut data={chartData} />
+      <img className="mt-8 mr-8" src={ChartImage} />
       <HeatMapSideBar className="absolute inset-0" />
     </div>
   )

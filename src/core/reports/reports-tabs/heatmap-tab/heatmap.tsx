@@ -1,34 +1,72 @@
-import  { useEffect, useRef } from 'react';
-import mapboxgl from 'mapbox-gl';
+import { Line } from "react-chartjs-2";
+import { Chart as ChartJS, registerables } from "chart.js"
+ChartJS.register(...registerables)
+import HeatmapImage from "../../../../assets/images/heatmap.webp"
 
-import 'mapbox-gl/dist/mapbox-gl.css';
 
+
+
+
+const labels = ["يناير", "فبراير", "مارس", "ابريل", "مايو", "يونيو","يوليو"];
+
+const data = {
+  labels: labels,
+  datasets: [
+  
+    {
+      label: 'الصفا',
+      data: [98, 34,66,12,48,37,85],
+      borderColor:"#5BB36B",
+      backgroundColor: "#5BB36B30",
+      lineTension: 0.2,
+    
+      fill: true
+    },
+    {
+      label: 'الماجدية',
+      data: [87, 76,56,98,68,78,45],
+      lineTension: 0.2,
+     
+      borderColor: "#FFCF5F",
+      backgroundColor: "#FFCF5F30",
+      fill: true
+    },
+    {
+      label: 'الشاهقة',
+      data: [27, 56,66,18,34,78,95],
+      borderColor: "#CA8F41",
+      backgroundColor: "#CA8F4130",
+      lineTension: 0.2,
+      fill: true
+    },
+  
+  
+   
+  ]
+};
+const options =  {
+  scales: {
+    yAxes: {  
+     
+      title: {
+      display: true,
+      text: 'قيمة العقار'
+    }}}}
 const HeatMap = () => {
-  const mapContainerRef = useRef<any>(null!);
-  const mapRef = useRef<any>(null!);
+  return <div>
+    <div className="relative mt-6  md:w-[350px] md:h-[350px]  w-[380px] h-[380px] md:mx-auto">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-[400px] md:h-[400px] w-[340px] h-[340px] border border-slate-300/35 rounded-full opacity-50 animate-pulse-slowest"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-[350px] md:h-[350px] w-[280px] h-[280px] border border-slate-400/35 rounded-full opacity-50 animate-pulse-slowest"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-[300px] md:h-[300px] w-[280px] h-[280px] border border-slate-400/35 rounded-full opacity-50 animate-pulse-slowest"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-[400px] md:h-[400px] w-[280px] h-[280px]   rounded-full z-50">
+      <img src={HeatmapImage}/>
+      </div>    
+  </div>
 
-  useEffect(() => {
-    mapboxgl.accessToken = import.meta.env.VITE_ACCESS_TOKEN
+<Line className="mt-4 w-full " data={data} options={options}/>
+    
+  </div>
 
-    const sw = new mapboxgl.LngLat(46.3253, 24.4036);
-const ne = new mapboxgl.LngLat(46.980, 24.9836);
-const bounds = new mapboxgl.LngLatBounds(sw, ne);
-
-    mapRef.current = new mapboxgl.Map({
-      container: mapContainerRef.current,
-      style: "mapbox://styles/hayaofwar/cm2y9jb66006701qzbdxx1kp8?optimize=true",
-      center: [ 46.6753,24.7136],
-      zoom: 10,
-      attributionControl:false,
-      maxBounds: bounds
-    });
-
-    return () => {
-      mapRef.current.remove();
-    };
-  }, []);
-
-  return <div id='map-container' className='mt-6' ref={mapContainerRef} style={{ height: '550px', width: '500px' }}></div>;
 };
 
 export default HeatMap;
