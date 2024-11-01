@@ -43,7 +43,7 @@ const ReportsTable = ({data, columns}:any)=>{
               </TableRow>
             </TableHeader>
             <TableBody>
-              {table.getRowModel().rows.map((row,i) => (
+              {table.getRowModel().rows.map((row) => (
                 <TableRow key={row.id}>
                   {row.getVisibleCells().map((cell) => (
                     <TableCell key={cell.id}>
