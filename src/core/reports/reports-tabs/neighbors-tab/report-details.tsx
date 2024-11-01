@@ -5,6 +5,7 @@ import CalenderIcon from '../../../../assets/icons/calendar.svg?react'
 import AlertIcon from '../../../../assets/icons/alert.svg?react'
 import ClockIcon from '../../../../assets/icons/clock.svg?react'
 import SettingsIcon from '../../../../assets/icons/settings-error.svg?react'
+import ImageActionsImage from "../../../../assets/images/img-actions.png"
 import moment from 'moment'
 import SampleImage from "../../../../assets/images/sample.webp"
 import { pollutionCategoriesMap } from '../../constants'
@@ -15,7 +16,7 @@ type TProps = {
 
 const ReportDetails = ({ report }: TProps) => {
   return (
-    <div className='flex-1'>
+    <div className='flex-1 mb-20'>
       <h3 className='my-8 font-bold'>بلاغ: {report.title}</h3>
 
       <div className="grid grid-cols-2 gap-8">
@@ -38,8 +39,9 @@ const ReportDetails = ({ report }: TProps) => {
 
       </div>
 
-      <div className='img-report mt-8'>
-        <img width={"600px"} height={"200px"} src={SampleImage}/>
+      <div className='img-report mt-8 text-center'>
+        <img className='w-full' src={SampleImage}/>
+        <img className='mx-auto mt-2' src={ImageActionsImage} width={"150px"}/>
       </div>
     </div>
   )

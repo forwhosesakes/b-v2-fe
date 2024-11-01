@@ -18,7 +18,7 @@ const DropdownList = (props: TProps) => {
     <div 
 
     ref={dropdownRef}
-    onClick={()=>setShowOptions(prev=>!prev)} className="relative cursor-pointer ">
+    onClick={()=>setShowOptions(prev=>!prev)} className="relative cursor-pointer z-50 ">
       <div className="flex w-56 p-2 justify-between items-center border border-white/50 rounded-lg">
         <span>
           {props.selectedItem
