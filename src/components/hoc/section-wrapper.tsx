@@ -7,6 +7,7 @@ type TProps = {
     screenSized?: boolean, 
     children:ReactNode, 
     onSectionVisible?:()=>void,
+    
 }
 
 const directionToClasses = {

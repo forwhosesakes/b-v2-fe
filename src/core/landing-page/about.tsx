@@ -7,7 +7,7 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const About = () => {
   return (
-    <SectionWrapper direction={"horzontal_to_vertical"}  id="about" styles="relative mt-16">
+    <SectionWrapper direction={"horzontal_to_vertical"}  id="about" styles="relative">
       <div className="m-10 flex-1 flex flex-col items-center">
         <Chip>عن بصير</Chip>
         <h2 className="my-5">

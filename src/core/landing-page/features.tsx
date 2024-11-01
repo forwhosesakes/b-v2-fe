@@ -21,7 +21,7 @@ const Features = () => {
   return (
     <SectionWrapper id="features" direction="vertical">
       <video
-        className="max-h-full w-full object-cover opacity-65"
+        className="max-h-full w-full object-cover"
         loop
         muted
         autoPlay

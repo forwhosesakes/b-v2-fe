@@ -1,44 +1,31 @@
 import Chip from "../../components/chip/chip.tsx"
 import SectionWrapper from "../../components/hoc/section-wrapper.tsx"
-import DetectionBorders from "../../assets/images/detection-process-borders.svg"
-import { useRef } from "react"
-import DetectiionProcessImage from "../../assets/images/detection-process-v2.png"
+import DetectiionProcessImage from "../../assets/images/detection-process.webp"
 import { LazyLoadImage } from "react-lazy-load-image-component"
 import "react-lazy-load-image-component/src/effects/blur.css"
 
 const SystemPreview = () => {
-  const svgContainerRef = useRef<HTMLDivElement>(null!)
 
-  const onEnteringSection = () => {
-    svgContainerRef.current.classList.add("")
-  }
   return (
     <SectionWrapper
-      onSectionVisible={onEnteringSection}
       id="system-preview"
       direction="vertical"
     >
-      <div className="md:w-2/3">
-        <div className="flex w-2/3 justify-center">
+      <div className="w-full">
+        <div className="flex w-full justify-center">
           <Chip>عمل النظام</Chip>
         </div>
-        <h1 className="leading-loose gradient-text">كيف يعمل نظام بصير؟</h1>
-        <p className="text-center text-xs leading-relaxed text-paragraphs_primary/70 md:w-3/5 md:text-lg">
+        <h1 className="leading-loose gradient-text mx-auto w-full  text-center">كيف يعمل نظام بصير؟</h1>
+        <p className="text-center text-xs leading-relaxed text-paragraphs_primary/70  mx-auto md:text-lg md:w-2/3">
           تعمل كاميرا النظام (هاتف - كاميرا مثبتة ) على تسجيل جميع الصور
           والمشاهد ثم إرسالها إلى وحدة التحليل بشكل آلي ومعالجتها في نفس الوقت
         </p>
       </div>
 
-      <div ref={svgContainerRef} className="relative">
-        <LazyLoadImage
-   
-          src={DetectionBorders}
-          className="absolute left-10 z-20 w-full"
-        />
-
+      <div className="w-full flex justify-center">
         <LazyLoadImage
           effect="blur"
-          className="relative z-0 w-4/5"
+          className="  mx-auto "
           src={DetectiionProcessImage}
         />
       </div>

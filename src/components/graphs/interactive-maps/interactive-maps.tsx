@@ -7,7 +7,7 @@ const InteractiveMaps = ()=>{
 
 
     return <Graph>
-        <div className="magic-circles flex flex-row justify-center group hover:bg-[size:200%_110%] h-full w-full ">
+        <div className="magic-circles flex flex-row justify-center group hover:bg-[size:200%_200%] h-full w-full ">
         <LazyLoadImage
          effect="blur"
          wrapperProps={{
