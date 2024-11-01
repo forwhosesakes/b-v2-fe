@@ -36,7 +36,7 @@ const PlayButton = ({onClick, styles, isPlaying}: TProps  )=>{
 
         <button 
         onClick={onClick}
-        className=' flex flex-row items-center  justify-between'>
+        className=' flex flex-row items-center justify-between'>
         
        {<> <span  className={`text-xs text-white/90 transition-text-display text-nowrap ${isActivated&&' ml-4'}`}>{isActivated&&"كيفية عمل بصير"} </span> {isPlaying? <Pause width={"20px"} height={"20px"}/>:<Play />}</>   }
         
