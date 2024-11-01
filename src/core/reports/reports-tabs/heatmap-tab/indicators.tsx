@@ -18,7 +18,7 @@ const Indicators = () => {
       <div className=" flex flex-row justify-between gap-x-2">
         <div>
           <h6>تمت معالجتها</h6>
-          <h3 className="mt-2 text-cyanish">90</h3>
+          <p className="mt-2 font-bold text-4xl text-cyanish">90</p>
           <CicrularProgress<"DISCERETE">
             progress={68}
             fill={"text-[#FFCF5F]"}
@@ -27,7 +27,7 @@ const Indicators = () => {
 
         <div>
           <h6> قيد التنفيذ</h6>
-          <h3 className="mt-2 text-cyanish ">19</h3>
+          <p className="mt-2 font-bold text-4xl text-cyanish ">19</p>
    
 
           <CicrularProgress<"DISCERETE">
