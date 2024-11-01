@@ -10,6 +10,8 @@ import IndeterminateCheckbox from "../../../components/Indeterminate-checkbox/in
 import React from "react"
 import PaginatedTableFooter from "../../../components/paginated-table/paginated-table"
 import ReportsTable from "./reports-table-tab/reports-table"
+import AvatarGroup from "../../../assets/images/avatar-group.webp"
+import { pollutionCategoriesMap } from "../constants"
 
 const ReportsTableTab = () => {
   const [page, setPage] = useState(1)
@@ -49,15 +51,27 @@ const ReportsTableTab = () => {
         ),
       },
       {
+        accessorKey: "categories",
+        cell: (info) => "بلاغ متعلق ب"+pollutionCategoriesMap.get(info.getValue()[0].name).label ,
+        header: "الوصف",
+      },
+      {
         accessorKey: "title",
         cell: (info) => info.getValue(),
-        header: "الوصف",
+        header: () => "الموقع",
       },
       {
         accessorKey: "villa",
         cell: (info) => info.getValue(),
-        header: () => "الموقع",
+        header: () => "الفيلا",
       },
+
+      {
+        accessorKey: "neighbor",
+        cell: () => "دارة صفا",
+        header: () => "المجمع",
+      },
+
       {
         accessorKey: "createdAt",
         id: "date",
@@ -91,6 +105,8 @@ const ReportsTableTab = () => {
     <p></p>
   ) : (
     <>
+    <img  className={"mt-4"} src={AvatarGroup}/>
+
       <ReportsTable data={data.data.reports} columns={columns}/>
       <PaginatedTableFooter
         currentPage={page}

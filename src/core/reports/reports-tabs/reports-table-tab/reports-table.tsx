@@ -29,6 +29,7 @@ const ReportsTable = ({data, columns}:any)=>{
 
       return (
         <>
+        
           <Table className="mx-auto mt-20 w-3/5">
             <TableHeader>
               <TableRow>
@@ -44,7 +45,7 @@ const ReportsTable = ({data, columns}:any)=>{
             </TableHeader>
             <TableBody>
               {table.getRowModel().rows.map((row) => (
-                <TableRow key={row.id}>
+                <TableRow className={`${row.getIsSelected()&&"bg-[#042238]/50"}`} key={row.id}>
                   {row.getVisibleCells().map((cell) => (
                     <TableCell key={cell.id}>
                       {flexRender(cell.column.columnDef.cell, cell.getContext())}

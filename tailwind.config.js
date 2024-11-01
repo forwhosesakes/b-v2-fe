@@ -32,7 +32,7 @@ export default {
         "detection-gradient":
           "linear-gradient(180deg, #0E3C4A 0%, rgba(14, 58, 73, 0.00) 100%)",
         "header-gradient":
-          "linear-gradient(336deg, rgba(10, 224, 255, 0.2) -16.28%, rgba(10, 224, 255, 0.00) 105.59%)",
+          "linear-gradient(357deg, rgba(10, 224, 255, 0.2) -16.28%, rgba(10, 224, 255, 0.00) 105.59%)",
       },
       transition: {
         indicator:
