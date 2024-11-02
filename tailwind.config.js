@@ -210,15 +210,22 @@ export default {
       })
     }),
 
-    plugin(function ({ matchUtilities, theme }) {
-      matchUtilities(
-        {
-          "text-shadow": (value) => ({
-            textShadow: value,
-          }),
-        },
-        { values: theme("textShadow") },
-      )
-    }),
+  
+  
   ],
+
+
+  purge: {
+    content: [
+      './src/**/*.{js,jsx,ts,tsx}',
+      './index.html',
+    ],},
+    options: {
+      safelist: [
+        // Add any classes that might be dynamically created
+        /^blurry-/,
+        /^stars-/,
+        /^glowing-box/,
+      ]
+    }
 }

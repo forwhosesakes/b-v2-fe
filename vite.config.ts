@@ -10,19 +10,29 @@ export default defineConfig({
     port: 5173,
   },
   plugins: [react(),svgr()],
+  css: {
+    // Enable CSS modules if you're using them
+    modules: {
+      localsConvention: 'camelCaseOnly',
+      scopeBehaviour: 'local',
+    },
+ 
+  },
   build: {
     chunkSizeWarningLimit: 1000,
     
     rollupOptions: {
       output: {
-        // Separate chunks for different vendors
         manualChunks: {
-          'chart': ['chart.js'],
-       
-     
+          vendor: ['react', 'react-dom'],
+          chart: ['chart.js', 'react-chartjs-2']
         },
-      },
+        entryFileNames: 'assets/[name]-[hash].js',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]'
+      }
     },
+    cssCodeSplit: true,
     
   
   },

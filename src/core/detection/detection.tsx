@@ -5,8 +5,6 @@ import AddIcon from "../../assets/icons/add.svg?react"
 
 import { useGetInferenceMutation } from "../../api/queries/inference.query"
 import CicrularProgress from "../../components/skeleton/circular-progress.tsx"
-import Modal from "react-modal"
-import ComparisionModal from "./comparisionModal/comparisionModal.tsx"
 import MediaWithProgressOverlay from "../../components/media-with-progress-overlay.tsx"
 
 type MediaSource = {
@@ -22,7 +20,6 @@ const Detection = () => {
     reset: clearInferenceData,
   } = useGetInferenceMutation()
 
-  const [modalIsOpen, setModalIsOpen] = useState(false)
   const [mediaSrc, setMediaSrc] = useState<MediaSource | null>(null)
 
   const onDrop = useCallback(([acceptedFile]: any[]) => {
@@ -133,46 +130,10 @@ const Detection = () => {
           <span className="button-gradient-text">مسح</span>
         </button>
 
-        {inferenceUrl && mediaSrc?.type === "image" && (
-          <button
-            onClick={() => setModalIsOpen(true)}
-            className="button hidden button-primary button-container w-fit px-16 py-2 hover:shadow-inner"
-          >
-            <span className="button-gradient-text">المقارنة</span>
-          </button>
-        )}
+        
       </div>
 
-      {mediaSrc?.uploadedPath && inferenceUrl && (
-        <Modal
-          isOpen={modalIsOpen}
-          closeTimeoutMS={400}
-          onRequestClose={() => setModalIsOpen(false)}
-          contentLabel="Comp Modal"
-          style={{
-            content: {
-              position: "absolute",
-              overflow: "scroll",
-              transform: "translate(-50%, -50%)",
-              top: "50%",
-              left: "50%",
-              background: "white",
-              borderRadius: "1rem",
-              padding: "1rem",
-              minHeight: "500px",
-              // minWidth:"900px",
-              // maxWidth:"1200px",
-            },
-
-            overlay: {},
-          }}
-        >
-          <ComparisionModal
-            beforeImageUrl={mediaSrc?.uploadedPath}
-            afterImageUrl={inferenceUrl}
-          />
-        </Modal>
-      )}
+     
     </section>
   )
 }
