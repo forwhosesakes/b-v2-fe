@@ -4,7 +4,7 @@ import LatestReports from "./heatmap-tab/latest-reports"
 
 const HeatMapTab = () => {
   return (
-    <div className="mx-auto mt-12 flex w-4/5 flex-col items-center">
+    <div className="mx-auto mt-12 flex w-full flex-col items-center">
       <h4 className="mx-auto">مؤشر التلوث</h4>
       <svg xmlns="http://www.w3.org/2000/svg" width="1233" height="20" viewBox="0 0 1233 20" fill="none">
   <path d="M1232.37 1.68826C1232.37 1.68826 858.777 18.1816 616.506 18.1816C374.235 18.1816 0.64284 1.68815 0.64284 1.68815" stroke="url(#paint0_radial_394_843)" stroke-width="2"/>

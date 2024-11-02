@@ -17,7 +17,7 @@ const ReportsTabs = () => {
     { id: 4, content: "دارة صفا" },
   ]
   return (
-    <div className="">
+    <div>
       <div className="flex flex-row justify-between  items-center border-b border-b-white/25">
       <div className="flex flex-row gap-x-4  py-5">
         {Array.from(TabsMap).map(([tab, label]) => {
@@ -35,12 +35,12 @@ const ReportsTabs = () => {
       </div>
 
       <div className="flex justify-between gap-x-8">
-        <button className="px-2 py-3 border rounded-lg  flex gap-x-2 hover:opacity-55 transition-opacity">
+        <button className="p-2 border rounded-lg  flex gap-x-2 hover:opacity-55 transition-opacity">
           <AddIcon  stroke="white"/>
           <span className="font-semibold ml-2">بلاغ جديد</span>
         </button>
 
-        <div className="px-2 py-3  w-80 border rounded-lg  flex gap-x-2">
+        <div className="p-2  w-80 border rounded-lg  flex gap-x-2">
           <SearchIcon stroke="white"/>
           <input type="text" className="bg-transparent outline-none " placeholder="ابحث عن بلاغ" />
 

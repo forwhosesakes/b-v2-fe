@@ -1,6 +1,15 @@
 import HouseIcon from "../../../../assets/icons/house-rounded.svg?react"
 import ReportCircle from "../../../../assets/images/report-circle.png"
 import { pollutionCategoriesMap } from "../../constants"
+import CalenderIcon from "../../../../assets/icons/calendar.svg?react"
+import SettingsIcon from "../../../../assets/icons/settings-error.svg?react"
+import AlertIcon from "../../../../assets/icons/alert.svg?react"
+import LocationIcon from "../../../../assets/icons/location.svg?react"
+import QrIcon from "../../../../assets/icons/qr-code.svg?react"
+import moment from "moment"
+
+
+
 type TProps = {
   report: ReportEntity|undefined, 
   selectedReport:ReportEntity|undefined,
@@ -11,40 +20,70 @@ const ReportMapPopup = (props: TProps) => {
   const isThereIsAnyOtherReportSelected = props.selectedReport !== undefined&& props.report?.id !== props.selectedReport?.id
   
    
-  const colors = {MODERATE:"blue", HIGH:"red", LOW:"green"}
+  const colors = {MODERATE:"#27B3BC", HIGH:"#B81010", LOW:"#47FF15"}
 
   return (
 
     <div className={`absolute`} style={{inset:props.report?.villa_style_loc}}>
-      <div className="relative ">
+      <div className="relative font-bold text-nowrap ">
 
         {props.report && !isThereIsAnyOtherReportSelected &&<><div className="popup-info absolute inset-0 flex flex-col gap-y-2  p-5 text-[8px]">
-          <p className="text-nowrap  flex w-full items-center gap-x-2 text-xs">
+          <p className=" flex w-full items-center gap-x-2 text-xs">
             <HouseIcon />
             <span> فيلا {(props.report.id % 10) + 1} </span>{" "}
+
+
+            <QrIcon width={32} height={32} className="mr-6"/>
           </p>
-          <p className="text-nowrap">البلاغ : {props.report.title}</p>
-          <p className="text-nowrap">
+          <p className="flex gap-x-2" >
+            <AlertIcon width={10} height={10}/>
+
+            <span>
+            البلاغ : 
+                 
+            {props.report.categories.length
+              ? props.report.categories
+                  .map((cat) => pollutionCategoriesMap.get(cat.name).label)
+                  .join(",")
+              : "غير متوفر"}</span>
+           
+           </p>
+          <p className="flex gap-x-2">
+            <LocationIcon width={10} height={10}/>
+
+            <span>
             الموقع : C{Math.floor(props.report.id / 10)}-
             {Math.floor(props.report.id % 10)}
+
+            </span>
+
+
+
+       
           </p>
-          <p className="text-nowrap">التاريخ : {props.report.createdAt}</p>
-          <p className="text-nowrap">
+          <p className="text-nowrap flex gap-x-2"
+          >
+            <CalenderIcon width={10} height={10}/>
+            
+            
+            التاريخ : {moment(props.report.createdAt).format("DD/MM/YYYY")}</p>
+          <p className=" flex gap-x-2">
+            <SettingsIcon  width={10} height={10}/>
+            <span>
             الحالة :{" "}
             {props.report.id % 3 === 0
               ? "قيد المعالجة"
               : props.report.id % 3 === 1
                 ? "فشل "
                 : "مؤكد"}
+            </span>
+
+
+       
           </p>
-          <p className="text-nowrap">
-            نوع البلاغ :{" "}
-            {props.report.categories.length
-              ? props.report.categories
-                  .map((cat) => pollutionCategoriesMap.get(cat.name).label)
-                  .join(",")
-              : "غير متوفر"}
-          </p>
+
+          <button onClick={()=>{props.onLocationClick(props.report!.id)}} className="rounded-full w-fit px-6 text-[#058FA1] bg-white hover:bg-white/75 transition-opacity">عرض</button>
+   
         </div></>}
        {props.report&&!isThereIsAnyOtherReportSelected&& <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +102,7 @@ const ReportMapPopup = (props: TProps) => {
           />
           <defs>
             <linearGradient
-              id="red"
+              id="#B81010"
               x1="98.5001"
               y1="0.87207"
               x2="98.5001"
@@ -75,19 +114,19 @@ const ReportMapPopup = (props: TProps) => {
             </linearGradient>
 
             <linearGradient
-              id="blue"
+              id="#27B3BC"
               x1="98.5001"
               y1="0.87207"
               x2="98.5001"
               y2="437.725"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="blue" />
-              <stop offset="1" stopColor="#038C9F00" stopOpacity="0" />
+              <stop stopColor="#2AB6BE" />
+              <stop offset="1" stopColor="#2AB6BE" stopOpacity="0" />
             </linearGradient>
 
             <linearGradient
-              id="green"
+              id="#47FF15"
               x1="98.5001"
               y1="0.87207"
               x2="98.5001"

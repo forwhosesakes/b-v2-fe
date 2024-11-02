@@ -89,7 +89,7 @@ const radarData = {
 
 
     return <div className="bg-dark  rounded-lg shadow ">
-    <div style={{ height: '300px' , width:"400px"}}>
+    <div style={{ height: '300px' , width:"450px"}}>
       <Radar data={radarData} options={radarOptions} />
     </div>
   </div>

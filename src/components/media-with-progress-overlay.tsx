@@ -10,8 +10,11 @@ type TProps = {
 
 const MediaWithProgressOverlay = (props: TProps) => {
   return (
-    <div className="relative w-full h-full">
-        {props.overlayCondition&&<props.progressComponent/>}
+    <div className="relative w-full h-full flex justify-center items-center">
+      <div className={"w-20 h-20"}>
+      {props.overlayCondition&&<props.progressComponent />}
+      </div>
+
       {props.mediaType === "image" ? (
         <img 
         className="z-10 w-full h-full object-cover rounded-lg absolute inset-0" src={props.mediaSrc} />

@@ -14,10 +14,10 @@ const NeighborMap = ({
   setSelectedReport: (r: ReportEntity) => void
 }) => {
 
-  const selectedReports = reports.slice(12,16)
+  const selectedReports = [reports[13],reports[36],reports[9] ]
 
   return (
-    <div className="relative max-h-[90vh]  flex-1">
+    <div className="relative max-h-[90vh] p-5 flex-1">
       {selectedReports
         .sort((a, b) => a.id - b.id)
         .map((r) => {
@@ -32,8 +32,8 @@ const NeighborMap = ({
             />
           )
         })}
-        <img src={ReportMapControl} className="absolute left-0 bottom-0"/>
-      <LazyLoadImage className="h-full w-full object-fill rounded-md" src={NormalMap} />
+        <img src={ReportMapControl} className="absolute left-0 bottom-6"/>
+      <LazyLoadImage className="h-full w-full object-fill   rounded-xl" src={NormalMap} />
     </div>
   )
 }

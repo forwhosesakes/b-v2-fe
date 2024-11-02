@@ -31,7 +31,7 @@ const LatestReports = () => {
 
 
   return (
-    <div className="relative w-1/3 text-center">
+    <div className="relative w-1/4 text-center">
       <h6 className="mx-auto mt-8 mb-4 font-bold text-cyanish">البلاغات الأخيرة</h6>
       <Table>
         <TableHeader>
