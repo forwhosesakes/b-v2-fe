@@ -2333,13 +2333,12 @@ body {
   width: 100%;
 }
 
-/* .path-formation svg path {
-  stroke-dasharray: 320;
-  stroke-dashoffset: 0;
-  fill: red;
-  animation: dash 3s ;
-  animation-fill-mode: forwards ;
-} */
+.path-formation svg path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  /* fill: transparent !important; */
+  animation: dash 5s linear;
+}
 
 @keyframes borderTurn {
   0% {
@@ -2372,5 +2371,15 @@ body {
     width: 50%;
 
     opacity: 1;
+  }
+
+
+}
+@keyframes dash {
+  from {
+    stroke-dashoffset: 822;
+  }
+  to {
+    stroke-dashoffset: 0;
   }
 }

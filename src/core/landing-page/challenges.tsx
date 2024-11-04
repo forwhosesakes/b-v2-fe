@@ -8,7 +8,9 @@ const Challenges = () => {
   const svgContainerRef = useRef<HTMLDivElement>(null!)
 
   const onStartAnimation = ()=>{
-    // svgContainerRef.current.classList.add("path-formation")
+    console.log("onStartAnimation");
+    
+    svgContainerRef.current.classList.add("path-formation")
     
   }
   return (
@@ -17,7 +19,7 @@ const Challenges = () => {
     onSectionVisible={onStartAnimation}
     styles="relative  bg-overlay  mt-96 mb-16">
       <div className="absolute bottom-0 w-full bg-bottom-black-overlay h-96" />
-      <div ref={svgContainerRef} className="path-formation  test-tailwind absolute top-0 w-full bg-upper-black-overlay h-96">
+      <div ref={svgContainerRef} className=" path-formation absolute top-0 w-full bg-upper-black-overlay h-96">
     
         <Electro   className=" w-full" />
       </div>
