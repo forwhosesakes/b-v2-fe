@@ -15,10 +15,14 @@ const Indicators = () => {
       <div key="bar" className="bg-primary-400 rounded p-4 shadow">
       <RadarChart/>
       </div>
+
+
+      <div className="h-1 w-96 blur-[0.5px] hr-gradient"/>
       <div className=" flex flex-row gap-x-4 mx-auto">
         <div>
           <h6>تمت معالجتها</h6>
           <p className="mt-2 font-bold text-4xl text-cyanish">90</p>
+        
           <CicrularProgress<"DISCERETE">
             progress={68}
             fill={"text-[#FFCF5F]"}

@@ -1,4 +1,3 @@
-import { LazyLoadImage } from "react-lazy-load-image-component"
 import NormalMap from "../../../../assets/images/reports-bg.webp"
 import ReportMapControl from "../../../../assets/images/report-control.webp"
 import "react-lazy-load-image-component/src/effects/blur.css"
@@ -33,7 +32,7 @@ const NeighborMap = ({
           )
         })}
         <img src={ReportMapControl} className="absolute left-0 bottom-6"/>
-      <LazyLoadImage className="h-full w-full object-fill   rounded-xl" src={NormalMap} />
+      <img className="h-full w-full object-fill   rounded-xl" src={NormalMap} />
     </div>
   )
 }

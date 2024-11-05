@@ -140,17 +140,17 @@ const ReportMapPopup = (props: TProps) => {
         </svg>}
 
       {props.report&&  <div className="relative">
-        {isSelected&& <img className="absolute left-6" src={ReportCircle}/>}
+        {isSelected&& <img className="absolute left-[110px] top-8 animate-pulse" src={ReportCircle}/>}
      { !isThereIsAnyOtherReportSelected&&<svg
         onClick={()=>{
   
           props.onLocationClick(props.report!.id)}}
           xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="46"
+          width="24"
+          height="30"
           viewBox="0 0 16 23"
          
-          className={`absolute  ${' hover:opacity-100 hover:fill-pink-300'} right-8 cursor-pointer`}
+          className={`absolute  ${' hover:opacity-100 hover:fill-pink-300'} right-7 top-2 cursor-pointer`}
         >
         
           <path

@@ -8,8 +8,6 @@ const Challenges = () => {
   const svgContainerRef = useRef<HTMLDivElement>(null!)
 
   const onStartAnimation = ()=>{
-    console.log("onStartAnimation");
-    
     svgContainerRef.current.classList.add("path-formation")
     
   }

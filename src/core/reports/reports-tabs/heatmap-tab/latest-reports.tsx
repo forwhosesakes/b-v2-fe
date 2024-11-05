@@ -35,7 +35,7 @@ const LatestReports = () => {
       <h6 className="mx-auto mt-8 mb-4 font-bold text-cyanish">البلاغات الأخيرة</h6>
       <Table>
         <TableHeader>
-            <TableRow>
+            <TableRow className="bg-[#36E6D0]/10 text-[#36E6D0] border-b border-b-[#36E6D0]">
             {headers.map(header=><TableHead key={header}>{header}</TableHead>)}
             </TableRow>
 
